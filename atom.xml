@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>欢迎来到，TWOTO 的博客</title>
+  
+  <subtitle>一起分享，一起成长</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://dongzhougu.github.io/"/>
+  <updated>2020-07-02T08:17:01.143Z</updated>
+  <id>https://dongzhougu.github.io/</id>
+  
+  <author>
+    <name>DongZhou</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>scikit-learn系列七：朴素贝叶斯</title>
+    <link href="https://dongzhougu.github.io/2020/07/02/scikit-learn-xi-lie-qi-po-su-bei-xie-si/"/>
+    <id>https://dongzhougu.github.io/2020/07/02/scikit-learn-xi-lie-qi-po-su-bei-xie-si/</id>
+    <published>2020-07-02T07:57:44.000Z</published>
+    <updated>2020-07-02T08:17:01.143Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scikit-learn系列六：SVM</title>
+    <link href="https://dongzhougu.github.io/2020/07/01/scikit-learn-xi-lie-liu-svm/"/>
+    <id>https://dongzhougu.github.io/2020/07/01/scikit-learn-xi-lie-liu-svm/</id>
+    <published>2020-07-01T07:57:44.000Z</published>
+    <updated>2020-07-02T08:15:55.196Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>emoji test</title>
+    <link href="https://dongzhougu.github.io/2020/06/30/emoji-test/"/>
+    <id>https://dongzhougu.github.io/2020/06/30/emoji-test/</id>
+    <published>2020-06-30T12:04:14.000Z</published>
+    <updated>2020-06-30T12:34:37.698Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;啊实打实大萨达萨达&lt;/p&gt;
+&lt;p&gt;:smile:&lt;/p&gt;
+&lt;p&gt;:smile:&lt;/p&gt;
+&lt;p&gt;:smile:&lt;/p&gt;
+&lt;p&gt;:rainbow:&lt;/p&gt;
+&lt;p&gt;:rainbow: asdasdasdasdasdasd&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://dongzhougu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo" scheme="https://dongzhougu.github.io/tags/Hexo/"/>
+    
+      <category term="博客搭建" scheme="https://dongzhougu.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scikit-learn系列五：决策树</title>
+    <link href="https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-wu-jue-ce-shu/"/>
+    <id>https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-wu-jue-ce-shu/</id>
+    <published>2020-06-30T10:57:44.000Z</published>
+    <updated>2020-06-30T11:29:42.278Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scikit-learn系列四：逻辑回归</title>
+    <link href="https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-si-luo-ji-hui-gui/"/>
+    <id>https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-si-luo-ji-hui-gui/</id>
+    <published>2020-06-30T07:57:44.000Z</published>
+    <updated>2020-06-30T06:38:28.549Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scikit-learn系列三：线性回归</title>
+    <link href="https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-san-xian-xing-hui-gui/"/>
+    <id>https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-san-xian-xing-hui-gui/</id>
+    <published>2020-06-30T02:57:44.000Z</published>
+    <updated>2020-06-30T03:07:16.352Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scikit-learn系列二：K-近邻</title>
+    <link href="https://dongzhougu.github.io/2020/06/29/scikit-learn-xi-lie-er-k-jin-lin/"/>
+    <id>https://dongzhougu.github.io/2020/06/29/scikit-learn-xi-lie-er-k-jin-lin/</id>
+    <published>2020-06-29T02:57:44.000Z</published>
+    <updated>2020-06-30T12:21:10.659Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scikit-learn系列一：机器学习基础</title>
+    <link href="https://dongzhougu.github.io/2020/06/28/scikit-learn-xi-lie-yi-ji-qi-xue-xi-ji-chu/"/>
+    <id>https://dongzhougu.github.io/2020/06/28/scikit-learn-xi-lie-yi-ji-qi-xue-xi-ji-chu/</id>
+    <published>2020-06-28T06:48:44.000Z</published>
+    <updated>2020-06-29T03:01:37.872Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;转载自作者: 片刻1998&lt;br&gt;GitHub地址:  &lt;a href=&quot;https://github.com/apachecn/AiLearning&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客备份</title>
+    <link href="https://dongzhougu.github.io/2020/06/28/hexo-bo-ke-bei-fen/"/>
+    <id>https://dongzhougu.github.io/2020/06/28/hexo-bo-ke-bei-fen/</id>
+    <published>2020-06-28T04:15:50.000Z</published>
+    <updated>2020-06-28T04:33:28.375Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://dongzhougu.github.io/2020/06/27/shi-yong-hexo-da-jian-github-bo-ke/&quot;&gt;上一篇文章&lt;/a&gt;已经具体讲述了博客的搭建与基本使用，接下来记录博客的备份工作。&lt;/p&gt;
+&lt;h4
+        
+      
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://dongzhougu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo" scheme="https://dongzhougu.github.io/tags/Hexo/"/>
+    
+      <category term="博客搭建" scheme="https://dongzhougu.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客优化加速</title>
+    <link href="https://dongzhougu.github.io/2020/06/27/hexo-bo-ke-you-hua-jia-su/"/>
+    <id>https://dongzhougu.github.io/2020/06/27/hexo-bo-ke-you-hua-jia-su/</id>
+    <published>2020-06-27T13:15:50.000Z</published>
+    <updated>2020-06-29T03:02:08.226Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://dongzhougu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo" scheme="https://dongzhougu.github.io/tags/Hexo/"/>
+    
+      <category term="博客搭建" scheme="https://dongzhougu.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Hexo搭建Github博客</title>
+    <link href="https://dongzhougu.github.io/2020/06/27/shi-yong-hexo-da-jian-github-bo-ke/"/>
+    <id>https://dongzhougu.github.io/2020/06/27/shi-yong-hexo-da-jian-github-bo-ke/</id>
+    <published>2020-06-27T09:15:50.000Z</published>
+    <updated>2020-06-29T03:27:37.483Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;以下为搭建本博客的教程&lt;strong&gt;(针对windows)&lt;/strong&gt;，记录一下自己的过程，也方便想要建站的小伙伴快速上手。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Github Pages:&lt;/code&gt; 可以被认为是用户编写的、托管在 Github
+        
+      
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://dongzhougu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo" scheme="https://dongzhougu.github.io/tags/Hexo/"/>
+    
+      <category term="博客搭建" scheme="https://dongzhougu.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+</feed>
