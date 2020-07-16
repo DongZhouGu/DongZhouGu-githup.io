@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongzhougu.github.io/"/>
-  <updated>2020-07-02T08:17:01.143Z</updated>
+  <updated>2020-07-16T11:02:06.712Z</updated>
   <id>https://dongzhougu.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>scikit-learn系列九：K-均值</title>
+    <link href="https://dongzhougu.github.io/2020/07/16/scikit-learn-xi-lie-jiu-k-jun-zhi/"/>
+    <id>https://dongzhougu.github.io/2020/07/16/scikit-learn-xi-lie-jiu-k-jun-zhi/</id>
+    <published>2020-07-16T07:57:44.000Z</published>
+    <updated>2020-07-16T11:02:06.712Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scikit-learn系列八：PCA</title>
+    <link href="https://dongzhougu.github.io/2020/07/15/scikit-learn-xi-lie-ba-pca/"/>
+    <id>https://dongzhougu.github.io/2020/07/15/scikit-learn-xi-lie-ba-pca/</id>
+    <published>2020-07-15T07:57:44.000Z</published>
+    <updated>2020-07-16T08:37:52.647Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>scikit-learn系列七：朴素贝叶斯</title>
