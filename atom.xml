@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongzhougu.github.io/"/>
-  <updated>2020-10-08T02:35:43.535Z</updated>
+  <updated>2020-10-21T07:22:24.613Z</updated>
   <id>https://dongzhougu.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSM框架整合</title>
+    <link href="https://dongzhougu.github.io/2020/10/21/ssm-kuang-jia-zheng-he/"/>
+    <id>https://dongzhougu.github.io/2020/10/21/ssm-kuang-jia-zheng-he/</id>
+    <published>2020-10-21T07:57:44.000Z</published>
+    <updated>2020-10-21T07:22:24.613Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-环境配置&quot;&gt;&lt;a href=&quot;#1-环境配置&quot; class=&quot;headerlink&quot; title=&quot;1. 环境配置&quot;&gt;&lt;/a&gt;1. 环境配置&lt;/h3&gt;&lt;h4 id=&quot;1-1-新建一Maven项目！ssmbuild-，-添加web的支持&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://dongzhougu.github.io/categories/Java/"/>
+    
+    
+      <category term="JavaWeb" scheme="https://dongzhougu.github.io/tags/JavaWeb/"/>
+    
+      <category term="Mybaties" scheme="https://dongzhougu.github.io/tags/Mybaties/"/>
+    
+      <category term="SpringMVC" scheme="https://dongzhougu.github.io/tags/SpringMVC/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL基础入门</title>
