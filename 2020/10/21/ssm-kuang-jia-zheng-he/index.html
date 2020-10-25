@@ -161,7 +161,137 @@
 })()
  </script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="欢迎来到，TWOTO 的博客" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+    
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+    
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+    
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+    
+   
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },1000); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+ </script></head>
 
 
 
@@ -620,7 +750,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    3.3k
                 </div>
                 
 
@@ -756,8 +886,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">resource</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com/gdz/dao/BookMapper.xml<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mappers</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="2-4-编写数据库对应的实体类"><a href="#2-4-编写数据库对应的实体类" class="headerlink" title="2.4 编写数据库对应的实体类"></a>2.4 编写数据库对应的实体类</h4><p>com.gdz.pojo.Books<br>使用lombok插件！</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>gdz<span class="token punctuation">.</span>pojo<span class="token punctuation">;</span>
 
@@ -1075,131 +1204,99 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
        <span class="token keyword">return</span> <span class="token string">"allBook"</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="编写首页-index-jsp"><a href="#编写首页-index-jsp" class="headerlink" title="编写首页 index.jsp"></a>编写首页 index.jsp</h5><pre class="line-numbers language-jsp"><code class="language-jsp"><%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE HTML>
-<html>
-<head>
-   <title>首页</title>
-   <style type="text/css">
-       a {
-           text-decoration: none;
-           color: black;
-           font-size: 18px;
-      }
-       h3 {
-           width: 180px;
-           height: 38px;
-           margin: 100px auto;
-           text-align: center;
-           line-height: 38px;
-           background: deepskyblue;
-           border-radius: 4px;
-      }
-   </style>
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="欢迎来到，TWOTO 的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<h5 id="编写首页-index-jsp"><a href="#编写首页-index-jsp" class="headerlink" title="编写首页 index.jsp"></a>编写首页 index.jsp</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">%</span>@ page language<span class="token operator">=</span><span class="token string">"java"</span> contentType<span class="token operator">=</span><span class="token string">"text/html; charset=UTF-8"</span> pageEncoding<span class="token operator">=</span><span class="token string">"UTF-8"</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE HTML<span class="token operator">></span>
+<span class="token operator">&lt;</span>html<span class="token operator">></span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+   <span class="token operator">&lt;</span>title<span class="token operator">></span>首页<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+   <span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
+       a <span class="token punctuation">{</span>
+           text<span class="token operator">-</span>decoration<span class="token operator">:</span> none<span class="token punctuation">;</span>
+           color<span class="token operator">:</span> black<span class="token punctuation">;</span>
+           font<span class="token operator">-</span>size<span class="token operator">:</span> 18px<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+       h3 <span class="token punctuation">{</span>
+           width<span class="token operator">:</span> 180px<span class="token punctuation">;</span>
+           height<span class="token operator">:</span> 38px<span class="token punctuation">;</span>
+           margin<span class="token operator">:</span> 100px auto<span class="token punctuation">;</span>
+           text<span class="token operator">-</span>align<span class="token operator">:</span> center<span class="token punctuation">;</span>
+           line<span class="token operator">-</span>height<span class="token operator">:</span> 38px<span class="token punctuation">;</span>
+           background<span class="token operator">:</span> deepskyblue<span class="token punctuation">;</span>
+           border<span class="token operator">-</span>radius<span class="token operator">:</span> 4px<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+   <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
 
- <div id="loading-container">
-     <p class="loading-text">玩命加载中 . . . </p> 
-     <div class="loading-image">
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div> 
-         <div></div>
-     </div>
- </div>
- <div id="loading-container">
-     <p class="loading-text">玩命加载中 . . . </p> 
-     <div class="loading-image">
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div> 
-         <div></div>
-     </div>
- </div>
- <div id="loading-container">
-     <p class="loading-text">玩命加载中 . . . </p> 
-     <div class="loading-image">
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div> 
-         <div></div>
-     </div>
- </div><body>
+<span class="token operator">&lt;</span>h3<span class="token operator">></span>
+   <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"${pageContext.request.contextPath}/book/allBook"</span><span class="token operator">></span>点击进入列表页<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="书籍列表页面-allbook-jsp"><a href="#书籍列表页面-allbook-jsp" class="headerlink" title="书籍列表页面 allbook.jsp"></a>书籍列表页面 allbook.jsp</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">%</span>@ taglib prefix<span class="token operator">=</span><span class="token string">"c"</span> uri<span class="token operator">=</span><span class="token string">"http://java.sun.com/jsp/jstl/core"</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span>@ page contentType<span class="token operator">=</span><span class="token string">"text/html;charset=UTF-8"</span> language<span class="token operator">=</span><span class="token string">"java"</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>html<span class="token operator">></span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>title<span class="token operator">></span>书籍展示<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 引入 Bootstrap <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
 
-<h3>
-   <a href="${pageContext.request.contextPath}/book/allBook">点击进入列表页</a>
-</h3>
-</body>
-</html><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="书籍列表页面-allbook-jsp"><a href="#书籍列表页面-allbook-jsp" class="headerlink" title="书籍列表页面 allbook.jsp"></a>书籍列表页面 allbook.jsp</h5><pre class="line-numbers language-jsp"><code class="language-jsp"><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>书籍展示</title>
-    <!-- 引入 Bootstrap -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
 
-<div class="container">
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row clearfix"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-12 column"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"page-header"</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>h1<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>small<span class="token operator">></span>书籍列表 <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> 显示所有书籍<span class="token operator">&lt;</span><span class="token operator">/</span>small<span class="token operator">></span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <div class="page-header">
-                <h1>
-                    <small>书籍列表 -------- 显示所有书籍</small>
-                </h1>
-            </div>
-        </div>
-    </div>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-4 column"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-primary"</span> href<span class="token operator">=</span><span class="token string">"${pageContext.request.contextPath}/book/toAddBook"</span><span class="token operator">></span>新增书籍<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
-    <div class="row">
-        <div class="col-md-4 column">
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAddBook">新增书籍</a>
-        </div>
-    </div>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row clearfix"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-mid-12 column"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>table <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"table table-hover table-striped"</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>thead<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>tr<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>th<span class="token operator">></span>书籍编号<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>th<span class="token operator">></span>书籍名称<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>th<span class="token operator">></span>书籍数量<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>th<span class="token operator">></span>书籍详情<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+                        <span class="token operator">&lt;</span>th<span class="token operator">></span>操作<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>thead<span class="token operator">></span>
+                <span class="token operator">&lt;</span>tbody<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>c<span class="token operator">:</span>forEach var<span class="token operator">=</span><span class="token string">"book"</span> items<span class="token operator">=</span><span class="token string">"${list}"</span><span class="token operator">></span>
+                        <span class="token operator">&lt;</span>tr<span class="token operator">></span>
+                            <span class="token operator">&lt;</span>td<span class="token operator">></span>$<span class="token punctuation">{</span>book<span class="token punctuation">.</span>bookID<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+                            <span class="token operator">&lt;</span>td<span class="token operator">></span>$<span class="token punctuation">{</span>book<span class="token punctuation">.</span>bookName<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+                            <span class="token operator">&lt;</span>td<span class="token operator">></span>$<span class="token punctuation">{</span>book<span class="token punctuation">.</span>bookCounts<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+                            <span class="token operator">&lt;</span>td<span class="token operator">></span>$<span class="token punctuation">{</span>book<span class="token punctuation">.</span>detail<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+                            <span class="token operator">&lt;</span>th<span class="token operator">></span>
+                                <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"${pageContext.request.contextPath}/book/toUpdate?id=${book.bookID}"</span><span class="token operator">></span>修改<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+                                <span class="token operator">&amp;</span>nbsp <span class="token operator">|</span> <span class="token operator">&amp;</span>nbsp
+                                <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#"</span><span class="token operator">></span>删除<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+                            <span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+                        <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>c<span class="token operator">:</span>forEach<span class="token operator">></span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>tbody<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>table<span class="token operator">></span>
 
-    <div class="row clearfix">
-        <div class="col-mid-12 column">
-            <table class="table table-hover table-striped">
-                <thead>
-                    <tr>
-                        <th>书籍编号</th>
-                        <th>书籍名称</th>
-                        <th>书籍数量</th>
-                        <th>书籍详情</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <c:forEach var="book" items="${list}">
-                        <tr>
-                            <td>${book.bookID}</td>
-                            <td>${book.bookName}</td>
-                            <td>${book.bookCounts}</td>
-                            <td>${book.detail}</td>
-                            <th>
-                                <a href="${pageContext.request.contextPath}/book/toUpdate?id=${book.bookID}">修改</a>
-                                &nbsp | &nbsp
-                                <a href="#">删除</a>
-                            </th>
-                        </tr>
-                    </c:forEach>
-                </tbody>
-            </table>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
-        </div>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
-    </div>
-</div>
-
-</body>
-</html><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h5 id="BookController-类编写-，-方法二：添加书籍"><a href="#BookController-类编写-，-方法二：添加书籍" class="headerlink" title="BookController 类编写 ， 方法二：添加书籍"></a>BookController 类编写 ， 方法二：添加书籍</h5><pre class="line-numbers language-java"><code class="language-java">
 <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/toAddBook"</span><span class="token punctuation">)</span>
 <span class="token keyword">public</span> String <span class="token function">toAddPaper</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1212,49 +1309,49 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
    bookService<span class="token punctuation">.</span><span class="token function">addBook</span><span class="token punctuation">(</span>books<span class="token punctuation">)</span><span class="token punctuation">;</span>
    <span class="token keyword">return</span> <span class="token string">"redirect:/book/allBook"</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="添加书籍页面：addBook-jsp"><a href="#添加书籍页面：addBook-jsp" class="headerlink" title="添加书籍页面：addBook.jsp"></a>添加书籍页面：addBook.jsp</h5><pre class="line-numbers language-jsp"><code class="language-jsp"><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<h5 id="添加书籍页面：addBook-jsp"><a href="#添加书籍页面：addBook-jsp" class="headerlink" title="添加书籍页面：addBook.jsp"></a>添加书籍页面：addBook.jsp</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">%</span>@ taglib prefix<span class="token operator">=</span><span class="token string">"c"</span> uri<span class="token operator">=</span><span class="token string">"http://java.sun.com/jsp/jstl/core"</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span>@ page contentType<span class="token operator">=</span><span class="token string">"text/html;charset=UTF-8"</span> language<span class="token operator">=</span><span class="token string">"java"</span> <span class="token operator">%</span><span class="token operator">></span>
 
-<html>
-<head>
-   <title>新增书籍</title>
-   <!-- 引入 Bootstrap -->
-   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<div class="container">
+<span class="token operator">&lt;</span>html<span class="token operator">></span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+   <span class="token operator">&lt;</span>title<span class="token operator">></span>新增书籍<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+   <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 引入 Bootstrap <span class="token operator">--</span><span class="token operator">></span>
+   <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
 
-   <div class="row clearfix">
-       <div class="col-md-12 column">
-           <div class="page-header">
-               <h1>
-                   <small>新增书籍</small>
-               </h1>
-           </div>
-       </div>
-   </div>
-   <form action="${pageContext.request.contextPath}/book/addBook" method="post">
-       <div class="form-group">
-           <label>书籍名称：</label>
-           <input type="text" name="bookName" class="form-control" required>
-       </div>
-        <div class="form-group">
-           <label>书籍数量：</label>
-           <input type="text" name="bookCounts" class="form-control" required>
-       </div>
-        <div class="form-group">
-           <label>书籍详情：</label>
-           <input type="text" name="detail" class="form-control" required>
-       </div>
-       <div class="form-group">
-           <input type="submit" class="form-control" value="添加">
-       </div>
+   <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row clearfix"</span><span class="token operator">></span>
+       <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-12 column"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"page-header"</span><span class="token operator">></span>
+               <span class="token operator">&lt;</span>h1<span class="token operator">></span>
+                   <span class="token operator">&lt;</span>small<span class="token operator">></span>新增书籍<span class="token operator">&lt;</span><span class="token operator">/</span>small<span class="token operator">></span>
+               <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+           <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+   <span class="token operator">&lt;</span>form action<span class="token operator">=</span><span class="token string">"${pageContext.request.contextPath}/book/addBook"</span> method<span class="token operator">=</span><span class="token string">"post"</span><span class="token operator">></span>
+       <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>label<span class="token operator">></span>书籍名称：<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+           <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"bookName"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> required<span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>label<span class="token operator">></span>书籍数量：<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+           <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"bookCounts"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> required<span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>label<span class="token operator">></span>书籍详情：<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+           <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"detail"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> required<span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+       <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"submit"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> value<span class="token operator">=</span><span class="token string">"添加"</span><span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
-   </form>
+   <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span>
 
-</div>
-</body>
-</html>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h5 id="BookController-类编写-，-方法三：修改书籍"><a href="#BookController-类编写-，-方法三：修改书籍" class="headerlink" title="BookController 类编写 ， 方法三：修改书籍"></a>BookController 类编写 ， 方法三：修改书籍</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/toUpdate"</span><span class="token punctuation">)</span>
@@ -1268,583 +1365,48 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
         bookService<span class="token punctuation">.</span><span class="token function">updateBook</span><span class="token punctuation">(</span>books<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token string">"redirect:/book/allBook"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="修改书籍页面-updateBook-jsp"><a href="#修改书籍页面-updateBook-jsp" class="headerlink" title="修改书籍页面  updateBook.jsp"></a>修改书籍页面  updateBook.jsp</h5><pre class="line-numbers language-jsp"><code class="language-jsp"><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-   <title>修改书籍</title>
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loader页面消失采用渐隐的方式*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-    
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
+<h5 id="修改书籍页面-updateBook-jsp"><a href="#修改书籍页面-updateBook-jsp" class="headerlink" title="修改书籍页面  updateBook.jsp"></a>修改书籍页面  updateBook.jsp</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">%</span>@ taglib prefix<span class="token operator">=</span><span class="token string">"c"</span> uri<span class="token operator">=</span><span class="token string">"http://java.sun.com/jsp/jstl/core"</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span>@ page contentType<span class="token operator">=</span><span class="token string">"text/html;charset=UTF-8"</span> language<span class="token operator">=</span><span class="token string">"java"</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>html<span class="token operator">></span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+   <span class="token operator">&lt;</span>title<span class="token operator">></span>修改书籍<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+    <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
 
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
+   <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row clearfix"</span><span class="token operator">></span>
+       <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-12 column"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"page-header"</span><span class="token operator">></span>
+               <span class="token operator">&lt;</span>h1<span class="token operator">></span>
+                   <span class="token operator">&lt;</span>small<span class="token operator">></span>修改书籍<span class="token operator">&lt;</span><span class="token operator">/</span>small<span class="token operator">></span>
+               <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+           <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+   <span class="token operator">&lt;</span>form action<span class="token operator">=</span><span class="token string">"${pageContext.request.contextPath}/book/updateBook"</span> method<span class="token operator">=</span><span class="token string">"post"</span><span class="token operator">></span>
+       <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"hidden"</span> name<span class="token operator">=</span><span class="token string">"bookID"</span> value<span class="token operator">=</span><span class="token string">"${book.bookID}"</span><span class="token operator">></span>
+       <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>label<span class="token operator">></span>书籍名称：<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+           <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"bookName"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> value<span class="token operator">=</span><span class="token string">"${book.bookName}"</span> required<span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>label<span class="token operator">></span>书籍数量：<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+           <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"bookCounts"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> value<span class="token operator">=</span><span class="token string">"${book.bookCounts}"</span>  required<span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>label<span class="token operator">></span>书籍详情：<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+           <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"detail"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> value<span class="token operator">=</span><span class="token string">"${book.detail}"</span> required<span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+       <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">></span>
+           <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"submit"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> value<span class="token operator">=</span><span class="token string">"修改"</span><span class="token operator">></span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
+   <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span>
 
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-    
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-    
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-    
-   
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo出现动画 */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//强制显示loading page 1s  
-    };
-    loaded();
-})()
- </script><style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loader页面消失采用渐隐的方式*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-    
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-    
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-    
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-    
-   
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo出现动画 */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//强制显示loading page 1s  
-    };
-    loaded();
-})()
- </script><style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loader页面消失采用渐隐的方式*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-    
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-    
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-    
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-    
-   
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo出现动画 */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//强制显示loading page 1s  
-    };
-    loaded();
-})()
- </script><style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loader页面消失采用渐隐的方式*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-    
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-    
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-    
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-    
-   
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo出现动画 */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//强制显示loading page 1s  
-    };
-    loaded();
-})()
- </script></head>
-<body>
-<div class="container">
-
-   <div class="row clearfix">
-       <div class="col-md-12 column">
-           <div class="page-header">
-               <h1>
-                   <small>修改书籍</small>
-               </h1>
-           </div>
-       </div>
-   </div>
-   <form action="${pageContext.request.contextPath}/book/updateBook" method="post">
-       <input type="hidden" name="bookID" value="${book.bookID}">
-       <div class="form-group">
-           <label>书籍名称：</label>
-           <input type="text" name="bookName" class="form-control" value="${book.bookName}" required>
-       </div>
-        <div class="form-group">
-           <label>书籍数量：</label>
-           <input type="text" name="bookCounts" class="form-control" value="${book.bookCounts}"  required>
-       </div>
-        <div class="form-group">
-           <label>书籍详情：</label>
-           <input type="text" name="detail" class="form-control" value="${book.detail}" required>
-       </div>
-       <div class="form-group">
-           <input type="submit" class="form-control" value="修改">
-       </div>
-
-   </form>
-
-</div>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
-</html><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h5 id="BookController-类编写-，-方法四：删除书籍"><a href="#BookController-类编写-，-方法四：删除书籍" class="headerlink" title="BookController 类编写 ， 方法四：删除书籍"></a>BookController 类编写 ， 方法四：删除书籍</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/del/{bookId}"</span><span class="token punctuation">)</span>
 <span class="token keyword">public</span> String <span class="token function">deleteBook</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">"bookId"</span><span class="token punctuation">)</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
    bookService<span class="token punctuation">.</span><span class="token function">deleteBookById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2435,52 +1997,35 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/08/mysql-ji-chu-ru-men/">
+                <a href="/2020/10/21/shua-ti-er-cha-shu-xi-lie-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/21.jpg" class="responsive-img" alt="MySQL基础入门">
+                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="刷题：二叉树系列总结">
                         
-                        <span class="card-title">MySQL基础入门</span>
+                        <span class="card-title">刷题：二叉树系列总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            根据开源项目 [21分钟MySQL基础入门]做的学习笔记
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JavaWeb/" class="post-category">
-                                    JavaWeb
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            DongZhou
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/JDBC/">
-                        <span class="chip bg-color">JDBC</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -2638,7 +2183,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.7k</span>&nbsp;字
+                class="white-color">82.4k</span>&nbsp;字
             
             
             
