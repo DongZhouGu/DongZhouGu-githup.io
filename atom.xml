@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongzhougu.github.io/"/>
-  <updated>2020-11-26T13:08:41.936Z</updated>
+  <updated>2020-11-26T14:29:38.284Z</updated>
   <id>https://dongzhougu.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="https://dongzhougu.github.io/2020/11/26/linux-chang-yong-ming-ling/"/>
+    <id>https://dongzhougu.github.io/2020/11/26/linux-chang-yong-ming-ling/</id>
+    <published>2020-11-26T04:15:50.000Z</published>
+    <updated>2020-11-26T14:29:38.284Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、文件-文件夹管理&quot;&gt;&lt;a href=&quot;#一、文件-文件夹管理&quot; class=&quot;headerlink&quot; title=&quot;一、文件/文件夹管理&quot;&gt;&lt;/a&gt;&lt;strong&gt;一、文件/文件夹管理&lt;/strong&gt;&lt;/h2&gt;&lt;pre
+        
+      
+    
+    </summary>
+    
+    
+      <category term="备忘录" scheme="https://dongzhougu.github.io/categories/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    
+    
+      <category term="Linux" scheme="https://dongzhougu.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>使用LXD搭建多人共用GPU</title>
