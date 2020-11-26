@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="刷题：二叉树系列总结, 欢迎来到，TWOTO 的博客">
+    <meta name="keywords" content="使用LXD搭建多人共用GPU, 欢迎来到，TWOTO 的博客">
     <meta name="description" content="技术、效率、摄影">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>刷题：二叉树系列总结 | 欢迎来到，TWOTO 的博客</title>
+    <title>使用LXD搭建多人共用GPU | 欢迎来到，TWOTO 的博客</title>
     <link rel="icon" type="image/png" href="/twoto.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/libs/awesome/css/all.css">
@@ -586,12 +586,12 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">刷题：二叉树系列总结</h1>
+                    <h1 class="description center-align post-title">使用LXD搭建多人共用GPU</h1>
                 </div>
             </div>
         </div>
@@ -706,12 +706,25 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                教程
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -720,7 +733,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-21
+                    2020-11-26
                 </div>
                 
 
@@ -729,7 +742,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    2.3k
                 </div>
                 
 
@@ -746,7 +759,157 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="1、-背景"><a href="#1、-背景" class="headerlink" title="1、 背景"></a>1、 背景</h2><p>对实验室多台工作站的多块GPU进行合理的管理和使用分配规划及申请/授权/使用自动管理，希望工作站可以作为服务器使用，能够多人同时使用，互不影响。</p>
+<h2 id="2、需求"><a href="#2、需求" class="headerlink" title="2、需求"></a>2、需求</h2><ul>
+<li>不同用户之间不能相互影响且可以同时使用</li>
+<li>用户注册登录使用需要被授权</li>
+<li>用户要能方便地访问自己的“机器”</li>
+<li>用户要有足够大的权限，能自由地安装程序，能自由地访问网络</li>
+<li>用户不被允许直接操作宿主机</li>
+</ul>
+<h2 id="3、具体方案"><a href="#3、具体方案" class="headerlink" title="3、具体方案"></a>3、具体方案</h2><h3 id="3-1、LXD-ZFS-安装及配置"><a href="#3-1、LXD-ZFS-安装及配置" class="headerlink" title="3.1、LXD/ZFS 安装及配置"></a>3.1、LXD/ZFS 安装及配置</h3><h4 id="LXD-软件安装s"><a href="#LXD-软件安装s" class="headerlink" title="LXD 软件安装s"></a>LXD 软件安装s</h4><p>LXD：用于创建和管理容器<br>ZFS：用于管理物理磁盘，支持 LXD 高级功能，负责容器存储。<br>Bridge-Utils：用于搭建网桥，负责容器上网。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">sudo apt-get install lxd zfsutils-linux bridge-utils<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="初始化-LXD"><a href="#初始化-LXD" class="headerlink" title="初始化 LXD"></a>初始化 LXD</h4><p>运行 <code>sudo lxd init</code> 进行 LXD 初始化配置，选项如下图：</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/lxd.png" alt="lxd"></p>
+<ul>
+<li>LXD Clustering：不需要</li>
+<li>new storage pool：需要创建一个存储池</li>
+<li>Name of storage pool：给存储池命名</li>
+<li>storage backend：存储后端，使用 ZFS</li>
+<li>Create a new ZFS pool：需要创建一个 ZFS 池</li>
+<li>use an existing block device：Yes</li>
+<li>Path to block device：使用已有的磁盘分区用于 ZFS 的存储后端。这里用的2T硬盘</li>
+<li>MAAS server?：不知道是啥，不需要</li>
+<li>new local network bridge?：需要，我只需要使用 LXD 默认的网桥即可。</li>
+<li>new bridge be called：给网桥命名</li>
+<li>iPv4：默认 auto</li>
+<li>IPv6：默认 auto</li>
+<li>LXD available over the network？：默认 no</li>
+<li>stale cached？：默认 yes</li>
+<li>YAML printed？：选择yes，查看容器配置信息</li>
+</ul>
+<h4 id="新建容器"><a href="#新建容器" class="headerlink" title="新建容器"></a>新建容器</h4><pre class="line-numbers language-shell"><code class="language-shell"># 创建一个remote链接，指向TUNA镜像站。
+sudo lxc remote add tuna-images https://mirrors.tuna.tsinghua.edu.cn/lxc-images/ --protocol=simplestreams --public
+# 查看镜像列表，寻找合适的镜像的FINGERPRINT，用于下载
+sudo lxc image list tuna-images: 
+# 举例，创建一个名为tiger的容器。在lxc清华源中使用ubuntu/18.04
+sudo lxc launch tuna-images:ubuntu/18.04 tiger<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="查看容器"><a href="#查看容器" class="headerlink" title="查看容器"></a>查看容器</h4><p>运行 <code>sudo lxc list</code> 进行容器列表查看。</p>
+<p>运行 <code>sudo lxc exec &lt;ContainerTemplateName&gt; bash</code>  可进入容器的 root 用户下 bash。</p>
+<p>可以使用 <code>su ubuntu</code> 或 <code>sudo su</code> 进行用户切换。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">#使用以下命令更改容器系统用户密码
+passwd ubuntu 
+passwd root
+#后面远程登陆会用到<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="设置容器"><a href="#设置容器" class="headerlink" title="设置容器"></a>设置容器</h4><pre class="line-numbers language-sh"><code class="language-sh">#换源，加速apt-get insatll
+sudo vim /etc/apt/sources.list
+====
+deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+===
+#刷新源
+sudo apt update
+#安装必要工具
+apt install make cmake openssh-server gcc g++ build-essential
+#启动ssh命令 
+sudo service ssh start
+#端口转发60601是我们定的端口号，通过宿主机的60601端口号监听容器中22端口号（SSH默认端口号）
+sudo lxc config device add <container> proxy0 proxy listen=tcp:172.22.24.126:60601 connect=tcp:10.152.210.183:22 bind=host
+#此时就可以使用校园网访问
+ssh ubuntu@172.22.24.126 -p 60601<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-2、配置共享目录和-GPU"><a href="#3-2、配置共享目录和-GPU" class="headerlink" title="3.2、配置共享目录和 GPU"></a>3.2、配置共享目录和 GPU</h3><p>配置共享目录</p>
+<pre class="line-numbers language-sh"><code class="language-sh">sudo lxc config set <yourContainerName> security.privileged true
+sudo lxc config device add <yourContainerName> <shareName> disk source=path1 path=path2
+#举例
+sudo lxc config device add tiger father disk source=/home/gdz path=/father
+# path1为宿主机路径，path2为容器内路径<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>配置GPU</p>
+<pre class="line-numbers language-sh"><code class="language-sh">#为容器添加所有GPU:
+sudo lxc config device add <yourContainerName> gpu gpu
+#添加指定GPU： 
+sudo lxc config device add <yourContainerName> gpu0 gpu id=0
+# 安装驱动：在容器中显卡驱动不需要安装内核文件，安装宿主机显卡驱动的版本，通过共享目录传至容器中
+sudo sh /NVIDIA-Linux-x86_64-xxx.xx.run --no-kernel-module <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>挂载 <code>nvidia-uvm</code></p>
+<p>①如果宿主机没有<code>/dev/nvidia-uvm</code>设备，需要通过以下命令挂载设备：</p>
+<pre class="line-numbers language-sh"><code class="language-sh">/sbin/modprobe nvidia-uvm
+D=`grep nvidia-uvm /proc/devices | awk '{print $1}'`
+mknod -m 666 /dev/nvidia-uvm c $D 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>②挂载设备到容器：</p>
+<pre class="line-numbers language-sh"><code class="language-sh">sudo lxc config device add yourContainerName nvidia-uvm unix-char path=/dev/nvidia-uvm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-3、配置图形桌面"><a href="#3-3、配置图形桌面" class="headerlink" title="3.3、配置图形桌面"></a>3.3、配置图形桌面</h3><blockquote>
+<p>Xrdp 是 Microsoft 远程桌面协议 (RDP) 的开源实现，允许以图形方式控制远程系统。使用 RDP 可以登录到远程计算机并创建一个真实的桌面会话，就像您已登录到本地计算机一样。</p>
+<p>Ubuntu 存储库中有好几个桌面环境，这里我们将安装 Xfce 。它是一个快速，稳定和轻量级的桌面环境，非常适合在远程服务器上使用</p>
+</blockquote>
+<p><strong>安装 Xrdp</strong></p>
+<pre class="line-numbers language-sh"><code class="language-sh">sudo apt install xrdp
+# 安装完成后 Xrdp 服务将自动运行，您可以通过键入以下指令来验证 Xrdp 是否正在运行
+sudo systemctl status xrdp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><strong>配置 Xrdp</strong></p>
+<p>Xrdp 的配置文件位于 /etc/xrdp 目录。对于 Xrdp 的基本连接，只需要配置 Xrdp 即可使用 Xfce 。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">sudo vim <span class="token operator">/</span>etc<span class="token operator">/</span>xrdp<span class="token operator">/</span>xrdp<span class="token punctuation">.</span>ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在文件末尾添加以下内容并保存：</p>
+<p>exec startxfce4</p>
+<p>此外，该文件中可配置 xrdp 远程桌面服务的端口号（默认端口为3389）</p>
+<pre class="line-numbers language-sh"><code class="language-sh"># 重新启动 Xrdp 服务：
+sudo systemctl restart xrdp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>端口转发</strong></p>
+<pre><code># 在安装好XRDP后，与之前一样，因为我们ping不通容器，所以我们需要使用宿主机的端口号监听容器的xrdp的端口3389
+sudo lxc config device add &lt;container&gt; proxy1 proxy listen=tcp:172.22.24.126:60611 connect=tcp:10.152.210.183:3389 bind=host</code></pre><p>现在可以通过windows的远程连接或者ubuntu的Remmina 来使用容器。</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/image-20201126002245828.png" alt="1"></p>
+<h3 id="3-4、创建容器模板并分发"><a href="#3-4、创建容器模板并分发" class="headerlink" title="3.4、创建容器模板并分发"></a>3.4、创建容器模板并分发</h3><p><strong>为容器修改参数配置</strong></p>
+<pre class="line-numbers language-sh"><code class="language-sh">sudo lxc config edit YourContainerName<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>一般使用以下的配置即可满足</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/1.png" alt="img"></p>
+<p>配置默认容器参数（新容器的参数会继承default配置的参数，容器会优先使用自己的参数）</p>
+<pre><code>sudo lxc profile edit default</code></pre><p><strong>我们把这个配置好的容器当成模板，保存为镜像</strong>。</p>
+<p>停止容器</p>
+<pre><code> sudo lxc stop test</code></pre><p>将该容器复制为ubuntudemo，作为以后容器分发的模板</p>
+<pre><code>sudo lxc copy tiger ubuntudemo</code></pre><p>并删除端口转发</p>
+<pre><code>sudo lxc config device remove ubuntudemo proxy1</code></pre><p>现在，建立第二个容器bigdog吧，记得把端口转发设置下，并设置容器的初始密码</p>
+<pre class="line-numbers language-sh"><code class="language-sh">sudo lxc copy tiger ubuntudemo
+sudo lxc config device add bigdog proxy1 proxy listen=tcp:xx.xx.xx.xx:60621 connect=tcp:10.176.88.68:3389 bind=host<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="3-5、LXDUI-可视化管理界面"><a href="#3-5、LXDUI-可视化管理界面" class="headerlink" title="3.5、LXDUI 可视化管理界面"></a>3.5、LXDUI 可视化管理界面</h3><p>在宿主机上根据<a href="https://github.com/AdaptiveScale/lxdui" target="_blank" rel="noopener">AdaptiveScale/lxdui: LXDUI is a web UI for the native Linux container technology LXD/LXC (github.com)</a>配置可视化管理界面，如下，方便地管理容器</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/image-20201126153135876.png" alt=""></p>
+<h2 id="4、宿主机的远程访问"><a href="#4、宿主机的远程访问" class="headerlink" title="4、宿主机的远程访问"></a>4、宿主机的远程访问</h2><p>使用xdrp访问宿主机默认桌面</p>
+<h3 id="4-1、设置ubuntu"><a href="#4-1、设置ubuntu" class="headerlink" title="4.1、设置ubuntu"></a>4.1、设置ubuntu</h3><blockquote>
+<p>首先，我们先设置Ubuntu的远程控制，将其设置为允许被远程连接，进入系统-》首选项-》桌面共享，或者直接搜索桌面共享</p>
+<p>将【允许其他人查看您的桌面】这一项勾上，然后在安全那项，勾选【要求远程用户输入此密码】，并设置远程密码。并且我们取消勾选【必须为对本机器的每次访问进行确定】（这样做，是为了被远程的时候不需要再确认，否则每次远程都要人为确认才能被远程，会很繁琐）如图所示：</p>
+</blockquote>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/image-20201126153209005.png" alt=""></p>
+<h3 id="4-2、安装xdrp-vnc"><a href="#4-2、安装xdrp-vnc" class="headerlink" title="4.2、安装xdrp+vnc"></a>4.2、安装xdrp+vnc</h3><pre class="line-numbers language-sh"><code class="language-sh">#步骤一、安装TigerVNC Server软件包
+sudo apt-get install tightvncserver （使用在线安装）
+#步骤二、安装xrdp
+sudo apt-get install xrdp -y
+#步骤三、编辑配置：
+sudo vi /etc/xrdp/startwm.sh
+#把最下面的test和exec两行注释掉，添加一行
+unity<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-3、安装dconf-editor-取消权限限制"><a href="#4-3、安装dconf-editor-取消权限限制" class="headerlink" title="4.3、安装dconf-editor(取消权限限制)"></a>4.3、安装dconf-editor(取消权限限制)</h3><p>再次，我们需要取消掉请求加密的功能，否则缺少这一步是无法远程上的，这个时候我们需要安装dconf-editor工具进行配置，输入以下命令：</p>
+<pre><code>sudo apt-get install dconf-editor</code></pre><p>安装完成之后，我们需要打开dconf-editor工具，在桌面搜索dconf-editor打开，如图所示：</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/image-20201126153453473.png" alt=""></p>
+<p>打开之后，依次展开org-&gt;gnome-&gt;desktop-&gt;remote-access，然后取消 “requlre-encryption”的勾选即可。如图所示：</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/image-20201126153555644.png" alt=""></p>
+<p>至此，前期准备工作已经完成，后面直接通过VNC工具或者Windows自带的mstsc(远程桌面控制)进行访问就行。</p>
+<h2 id="5、总结"><a href="#5、总结" class="headerlink" title="5、总结"></a>5、总结</h2><p>现在就可以在宿舍或家里使用校园网访问工作站了，不管是宿主机还是容器都可以远程访问桌面。容器内已安装好cuda和显卡驱动，以及pycharm、miniconda、Chrome浏览器。</p>
+<p>通过此次练习与配置，对Linux环境更加熟悉了，准备整理一篇Linux常用命令供自己查阅使用。</p>
+<p>参考链接：</p>
+<p><a href="https://github.com/shenuiuin/LXD_GPU_SERVER" target="_blank" rel="noopener">shenuiuin/LXD_GPU_SERVER: 实验室GPU服务器的LXD虚拟化 (github.com)</a></p>
+<p><a href="https://blog.csdn.net/wangke0809/article/details/80235989" target="_blank" rel="noopener">https://blog.csdn.net/wangke0809/article/details/80235989</a></p>
+<p><a href="https://blog.yangl1996.com/post/gpu-passthrough-for-lxc/" target="_blank" rel="noopener">https://blog.yangl1996.com/post/gpu-passthrough-for-lxc/</a></p>
+<p><a href="https://abcdabcd987.com/setup-shared-gpu-server-for-labs/" target="_blank" rel="noopener">https://abcdabcd987.com/setup-shared-gpu-server-for-labs/</a></p>
+<p><a href="https://github.com/abcdabcd987/lxc-gpu" target="_blank" rel="noopener">https://github.com/abcdabcd987/lxc-gpu</a></p>
+<p><a href="https://blog.csdn.net/weixin_42749767/article/details/83720831?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.pc_relevant_is_cache&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.pc_relevant_is_cache" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42749767/article/details/83720831?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.pc_relevant_is_cache&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.pc_relevant_is_cache</a></p>
+<p><a href="https://developer.aliyun.com/article/578196" target="_blank" rel="noopener">https://developer.aliyun.com/article/578196</a></p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -789,7 +952,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dongzhougu.github.io/2020/10/21/shua-ti-er-cha-shu-xi-lie-zong-jie/">https://dongzhougu.github.io/2020/10/21/shua-ti-er-cha-shu-xi-lie-zong-jie/</a>
+                    <a href="https://dongzhougu.github.io/2020/11/26/lxd-gpu2.0/">https://dongzhougu.github.io/2020/11/26/lxd-gpu2.0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -826,7 +989,11 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1255,9 +1422,60 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/11/26/lxd-gpu2.0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/17.jpg" class="responsive-img" alt="使用LXD搭建多人共用GPU">
+                        
+                        <span class="card-title">使用LXD搭建多人共用GPU</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            每个用户都有自己的容器，宿主机为容器分配空间，gpu资源
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/10/21/ssm-kuang-jia-zheng-he/">
                     <div class="card-image">
@@ -1275,9 +1493,9 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1303,63 +1521,6 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                     
                     <a href="/tags/SpringMVC/">
                         <span class="chip bg-color">SpringMVC</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/10/08/mysql-ji-chu-ru-men/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/21.jpg" class="responsive-img" alt="MySQL基础入门">
-                        
-                        <span class="card-title">MySQL基础入门</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            根据开源项目 [21分钟MySQL基础入门]做的学习笔记
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JavaWeb/" class="post-category">
-                                    JavaWeb
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/JDBC/">
-                        <span class="chip bg-color">JDBC</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                 </div>
@@ -1512,7 +1673,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">82.4k</span>&nbsp;字
+                class="white-color">84.7k</span>&nbsp;字
             
             
             

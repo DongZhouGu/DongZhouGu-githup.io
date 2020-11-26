@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongzhougu.github.io/"/>
-  <updated>2020-10-25T14:15:10.099Z</updated>
+  <updated>2020-11-26T13:08:41.936Z</updated>
   <id>https://dongzhougu.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用LXD搭建多人共用GPU</title>
+    <link href="https://dongzhougu.github.io/2020/11/26/lxd-gpu2.0/"/>
+    <id>https://dongzhougu.github.io/2020/11/26/lxd-gpu2.0/</id>
+    <published>2020-11-26T04:15:50.000Z</published>
+    <updated>2020-11-26T13:08:41.936Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1、-背景&quot;&gt;&lt;a href=&quot;#1、-背景&quot; class=&quot;headerlink&quot; title=&quot;1、 背景&quot;&gt;&lt;/a&gt;1、
+        
+      
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://dongzhougu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Linux" scheme="https://dongzhougu.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>SSM框架整合</title>
@@ -44,33 +71,6 @@
       <category term="Mybaties" scheme="https://dongzhougu.github.io/tags/Mybaties/"/>
     
       <category term="SpringMVC" scheme="https://dongzhougu.github.io/tags/SpringMVC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>刷题：二叉树系列总结</title>
-    <link href="https://dongzhougu.github.io/2020/10/21/shua-ti-er-cha-shu-xi-lie-zong-jie/"/>
-    <id>https://dongzhougu.github.io/2020/10/21/shua-ti-er-cha-shu-xi-lie-zong-jie/</id>
-    <published>2020-10-21T07:26:41.133Z</published>
-    <updated>2020-10-21T07:26:41.133Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
