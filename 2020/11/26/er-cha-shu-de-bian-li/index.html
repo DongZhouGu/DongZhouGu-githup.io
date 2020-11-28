@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo博客备份, 欢迎来到，TWOTO 的博客">
+    <meta name="keywords" content="Leetcode总结—二叉树的遍历, 欢迎来到，TWOTO 的博客">
     <meta name="description" content="技术、效率、摄影">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo博客备份 | 欢迎来到，TWOTO 的博客</title>
+    <title>Leetcode总结—二叉树的遍历 | 欢迎来到，TWOTO 的博客</title>
     <link rel="icon" type="image/png" href="/twoto.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/libs/awesome/css/all.css">
@@ -586,12 +586,12 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo博客备份</h1>
+                    <h1 class="description center-align post-title">Leetcode总结—二叉树的遍历</h1>
                 </div>
             </div>
         </div>
@@ -708,12 +708,16 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                                <span class="chip bg-color">博客搭建</span>
+                            <a href="/tags/%E5%88%B7%E9%A2%98/">
+                                <span class="chip bg-color">刷题</span>
+                            </a>
+                        
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
                             </a>
                         
                     </div>
@@ -724,8 +728,8 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                教程
+                            <a href="/categories/leetcode/" class="post-category">
+                                leetcode
                             </a>
                         
                     </div>
@@ -737,7 +741,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-28
+                    2020-11-26
                 </div>
                 
 
@@ -746,7 +750,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    257
+                    1.9k
                 </div>
                 
 
@@ -763,24 +767,365 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a href="https://dongzhougu.github.io/2020/06/27/shi-yong-hexo-da-jian-github-bo-ke/">上一篇文章</a>已经具体讲述了博客的搭建与基本使用，接下来记录博客的备份工作。</p>
-<h4 id="初始备份"><a href="#初始备份" class="headerlink" title="初始备份"></a>初始备份</h4><ul>
-<li><p>创建一个仓库用来存放备份文件，我的名字选择 <strong><a href="https://github.com/DongZhouGu/Blog-backup" target="_blank" rel="noopener">Blog-backup</a></strong>，勾选README。</p>
-</li>
-<li><p>复制仓库地址，运行Git将仓库clone到本地。</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> clone git@github.com:DongZhouGu/Blog-backup.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>将要备份的文件放到我们刚才clone的文件夹里面。</p>
-</li>
-<li><p>在 clone 的文件夹下运行 Git，依次输入以下命令：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
-<span class="token function">git</span> commit  -m  <span class="token string">"博客备份"</span>  （注：“backup”里面换成你需要，如“first commit”）
-<span class="token function">git</span> push -u origin master   （注：此操作目的是把本地仓库push到github上面，如果没有使用密钥此步骤需要你输入帐号和密码）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<h4 id="更新备份"><a href="#更新备份" class="headerlink" title="更新备份"></a>更新备份</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
-<span class="token function">git</span> commit  -m  <span class="token string">"博客备份"</span>
-<span class="token function">git</span> push origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                <p>二叉树是面试中常见的题目类型，这里，针对 leetcode 前200道题中的二叉树相关问题进行总结与思考，力求烂熟于心，能根据题目名回忆起题目的具体描述，进而用简洁的语言描述出算法的核心。具体的题目答案可打开 leetcode 查看历史提交记录。</p>
+<h2 id="二叉树的遍历（binary-tree-traversal）"><a href="#二叉树的遍历（binary-tree-traversal）" class="headerlink" title="二叉树的遍历（binary-tree-traversal）"></a>二叉树的遍历（binary-tree-traversal）</h2><blockquote>
+<p>二叉树的遍历是指从根结点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次且仅被访问一次。</p>
+</blockquote>
+<p><strong>为什么研究二叉树的遍历？</strong></p>
+<p>因为计算机只会处理线性序列，而我们研究遍历，就是把树中的结点变成某种意义的线性序列，这给程序的实现带来了好处。</p>
+<h2 id="1-三种基本遍历方式"><a href="#1-三种基本遍历方式" class="headerlink" title="1 三种基本遍历方式"></a>1 三种基本遍历方式</h2><p>首先是二叉树的遍历方式，最简单基础的也就是前序(preorder)、中序(inorder)、后序(postorder)三种遍历方式，对应题目 <a href="https://leetcode-cn.com/problems/binary-tree-preorder-traversal/" target="_blank" rel="noopener">144.二叉树的前序遍历</a> 、<a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="noopener">94. 二叉树的中序遍历</a> 、<a href="https://leetcode-cn.com/problems/binary-tree-postorder-traversal/" target="_blank" rel="noopener">145. 二叉树的后序遍历</a>。</p>
+<blockquote>
+<p>前中后，指的是根节点相对于左右结点的访问顺序</p>
+</blockquote>
+<p><strong>先序：</strong>考察到一个节点后，即刻输出该节点的值，并继续遍历其左右子树。(根左右)</p>
+<p><strong>中序：</strong>考察到一个节点后，将其暂存，遍历完左子树后，再输出该节点的值，然后遍历右子树。(左根右)</p>
+<p><strong>后序：</strong>考察到一个节点后，将其暂存，遍历完左右子树后，再输出该节点的值。(左右根)</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/png/1164521/1604243385831-701cef90-a04a-4ce6-aea3-053d461fd7c0.png" alt="image.png"></p>
+<p><strong>这种类型的题一般都是有两种解题思路：递归和迭代。</strong></p>
+<h3 id="1-1-递归法模板"><a href="#1-1-递归法模板" class="headerlink" title="1.1 递归法模板"></a>1.1 递归法模板</h3><blockquote>
+<p>我们并不需要太过于在意具体的递归过程，而是要想清楚让计算机干什么。计算机都可能溢出，用人脑去遍历就不现实了。</p>
+</blockquote>
+<p>思路： 判断什么时候把结点的 <code>val</code> 加入 <code>res</code> 数组中，<code>res.add(root.val)</code>放的位置决定了遍历顺序。</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">边界条件
+
+定义 dfs 函数：
+    如果root为空：返回
+    递归左子树
+    递归右子树
+    // root 的值加入到结果
+
+执行递归函数，返回结果<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res=new ArrayList<>();
+        helper(root,res);
+        return res;    
+    }
+    // 递归主程序
+    private void  helper(TreeNode root,List<Integer> res) {
+        // 判断root是否为空，是一个重要的递归终止的条件。
+        if(root==null) return;
+        // res.add(root.val);
+        helper(root.left,res);
+        helper(root.right,res);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>一样的代码，稍微调用一下位置就可以，如此固定的套路，使得只掌握递归解法并不足以令面试官信服=`=所以必须掌握迭代法加深对二叉树的理解！！</p>
+<h3 id="1-2-迭代法模板"><a href="#1-2-迭代法模板" class="headerlink" title="1.2 迭代法模板"></a>1.2 迭代法模板</h3><p>本质上是在模拟递归，因为在递归的过程中使用了系统栈，所以在迭代的解法中常用<code>Stack</code>来模拟系统栈。</p>
+<p><strong>思路：</strong>用<code>while</code>循环先将根节点和所有左孩子加入栈和结果数组中，直至<code>cur</code>为空。然后，每弹出一个栈顶元素 <code>tmp</code>，就到达它的右孩子，再将这个节点当作 <code>cur</code> 重新按上面的步骤来一遍，直至栈为空。这里又需要一个 <code>while</code> 循环。</p>
+<p>使用这个迭代模板处理前序和中序遍历，只要更改 <code>res.add(cur.val)</code> 的位置即可。</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">边界条件
+
+初始化stack,res,cur
+while stack或cur 非空：
+    while cur非空：
+        cur的值入栈stack
+        // cur的值加入res 前序
+        cur 向左下或右下遍历
+    弹出节点tmp
+    cur回到tmp的左或右子树
+
+返回结果<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res=new ArrayList<>();
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode cur=root;
+        while(cur!=null||!stack.isEmpty()){
+            while(cur!=null){
+                stack.push(cur);
+                //res.add(cur.val);前序
+                cur=cur.left;
+            }
+            tmp=stack.pop();
+            //res.add(tmp.val);中序
+            cur=tmp.right;
+        }
+        return res;  
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>但是后序并不能使用，取巧的方法是使用模板(根右左)，对其取反<code>Collections.reverse(res)</code>就是后序遍历的结果(左右根)</p>
+<blockquote>
+<p>利用了结果的特点反向输出，不免显得技术含量不足，因此掌握后序遍历标准的栈操作解法是必要的！</p>
+</blockquote>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> res=new ArrayList<>();
+        Deque<TreeNode> stack=new LinkedList<>();
+        TreeNode cur=root;
+        TreeNode p=null;
+        while(cur!=null || !stack.isEmpty()){
+            while(cur!=null){
+                stack.push(cur);
+                cur=cur.left;
+            }
+            //peek不删除栈顶，pop删除
+            cur=stack.peek();
+            // 一种情况是cur为最下面的子节点，需要加入到res，另一种是当前为遍历过右子树的根节点也需要加入到res
+            if(cur.right==null||cur.right==p){
+                res.add(cur.val);
+                stack.pop();
+                p=cur;
+                cur=null;
+            }else{
+                cur=cur.right;
+            }
+        }
+        return res;
+    }  
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2-层序遍历及其变题"><a href="#2-层序遍历及其变题" class="headerlink" title="2 层序遍历及其变题"></a>2 层序遍历及其变题</h2><p>除了基本的三种遍历使用DFS，使用BFS广度优先搜索的层序遍历也很重要<a href="https://leetcode-cn.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="noopener">102. 二叉树的层序遍历</a></p>
+<p>下面是两种解决此类问题的方法，一般使用左边的BFS</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/png/1164521/1604243155377-b28a1d4c-9972-4a07-b3ad-df8afb2f5be2.png" alt="image"></p>
+<h3 id="2-1-BFS层序遍历"><a href="#2-1-BFS层序遍历" class="headerlink" title="2.1 BFS层序遍历"></a>2.1 BFS层序遍历</h3><p>BFS遍历的标准写法如下，使用的是<strong>队列</strong>数据结构：</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">void bfs(TreeNode root) {
+    Queue<TreeNode> queue = new ArrayDeque<>();
+    queue.add(root);
+    while (!queue.isEmpty()) {
+        TreeNode node = queue.poll(); // Queue 中 remove() 和 poll()都是用来从队列头部删除一个元素。
+        if (node.left != null) {
+            queue.add(node.left);
+        }
+        if (node.right != null) {
+            queue.add(node.right);
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们可以直接用 BFS 得出层序遍历结果。然而，层序遍历要求的输入结果和 BFS 是不同的。层序遍历要求我们区分每一层，也就是返回一个二维数组。而 BFS 的遍历结果是一个一维数组，无法区分每一层，见下图的对比。</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/jpeg/1164521/1604886914430-074cfcee-91be-456c-8746-31a9610a9c2d.jpeg" alt="image"></p>
+<p>因此，我们需要在每一层前微修改一下代码，在每一层遍历开始前，先记录队列中的结点数量 n（也就是这一层的节点数量），然后一口气处理完这一层的 n个结点。</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">public List<List<Integer>> levelOrder(TreeNode root) {
+    List<List<Integer>> res = new ArrayList<>();
+
+    Queue<TreeNode> queue = new ArrayDeque<>();
+    if (root != null) {
+        queue.add(root);
+    }
+    while (!queue.isEmpty()) {
+        int n = queue.size();
+        List<Integer> level = new ArrayList<>();
+        for (int i = 0; i < n; i++) { 
+            TreeNode node = queue.poll();
+            level.add(node.val);
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+        }
+        res.add(level);
+    }
+
+    return res;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样，我们就可以用BFS来解决层序遍历问题了，<strong>重点是记录了每一层节点的数量，动图如下</strong></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/gif/1164521/1604887654992-69a189aa-e1e3-40bd-9f32-455e5b22b719.gif" alt="image"></p>
+<h3 id="2-2-选看-DFS层序遍历"><a href="#2-2-选看-DFS层序遍历" class="headerlink" title="2.2 (选看)DFS层序遍历"></a>2.2 (选看)DFS层序遍历</h3><p>DFS 遍历标准写法如下，使用的是<strong>递归</strong></p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">void dfs(TreeNode root) {
+    if (root == null) {
+        return;
+    }
+    dfs(root.left);
+    dfs(root.right);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>看起来比BFS的代码简洁很多，但观看下图就可以发现两者的遍历顺序是不同的，BFS其实更贴近我们想要的层序遍历逻辑。</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/gif/1164521/1604888059461-932b759d-59a7-4a5a-9500-87ba433c0286.gif" alt="image"></p>
+<p>那DFS究竟可不可以解决层序遍历问题呢？当然是可以的！</p>
+<p>把这个二叉树的样子调整一下，摆成一个田字形的样子。</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/jpeg/1164521/1604888384072-a2ada8f3-63d7-4e68-a9fd-d40614cc96f3.jpeg" alt="image"><br><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/gif/1164521/1604888390714-87d03f11-b0a2-4e54-af81-f1ec28d22d9e.gif" alt="image"></p>
+<p>田字形的每一层就对应一个 list，每次递归的时候都需要<strong>带一个 index(表示当前的层数)</strong>，也就对应那个田字格子中的第几行，如果当前行对应的 list 不存在，就加入一个空 list 进去。代码实现如下。</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">import java.util.*; 
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        if(root==null) {
+            return new ArrayList<List<Integer>>();
+        }
+        //用来存放最终结果
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        dfs(1,root,res);
+        return res;
+    }
+
+    void dfs(int index,TreeNode root, List<List<Integer>> res) {
+        //假设res是[ [1],[2,3] ]， index是3，就再插入一个空list放到res中
+        if(res.size()<index) {
+            res.add(new ArrayList<Integer>());
+        }
+        //将当前节点的值加入到res中，index代表当前层，假设index是3，节点值是99
+        //res是[ [1],[2,3] [4] ]，加入后res就变为 [ [1],[2,3] [4,99] ]
+        res.get(index-1).add(root.val);
+        //递归的处理左子树，右子树，同时将层数index+1
+        if(root.left!=null) {
+            dfs(index+1, root.left, res);
+        }
+        if(root.right!=null) {
+            dfs(index+1, root.right, res);
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>感觉有点像二叉树的前序遍历，根左右</p>
+<h3 id="2-3-变题-二叉树的锯齿形层次遍历"><a href="#2-3-变题-二叉树的锯齿形层次遍历" class="headerlink" title="2.3 (变题) 二叉树的锯齿形层次遍历"></a>2.3 (变题) <a href="https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank" rel="noopener">二叉树的锯齿形层次遍历</a></h3><p>该题是leetcode103题，medium难度，一句话题干描述：层序遍历，不过是之字形的。</p>
+<p>总体思路：用个变量flag来判断是从左往右还是从右往左打印</p>
+<p><strong>解决方案1(容易理解)：</strong> 在层序遍历代码的基础上，更改节点数值进入list的顺序</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">if (leftToRight) {
+    level.add(node.val);
+} else {
+    level.add(0, node.val);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>解决方案2(画图理解)：</strong> 使用deuqe双端队列：可以在两边同时添加和删除的队列</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA"># Deque<TreeNode> deque=new LinkedList<>();
+if (leftToRight) {
+    //从左边往右边打印
+    //移除队列头部的元素，如果子节点不为空加入到队列的尾部
+    cur = deque.removeFirst();
+    if (cur.right != null)
+        deque.addLast(cur.right);
+    if (cur.left != null)
+        deque.addLast(cur.left);
+} else {
+    //从右边往左边打印
+    //移除队列尾部的元素，如果子节点不为空加入到队列的头部
+    cur = deque.removeLast();
+    if (cur.left != null)
+        deque.addFirst(cur.left);
+    if (cur.right != null)
+        deque.addFirst(cur.right);
+}
+level.add(cur.val);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>deque中把每一行的节点值反序列表示，然后每次打印判断从左往右读deque还是从右往左。读的时候相应的也要改变左右孩子入队列的顺序来保持 deque中每一行的节点值反序表示。</p>
+<h3 id="2-4-变题-二叉树的右视图"><a href="#2-4-变题-二叉树的右视图" class="headerlink" title="2.4 (变题) 二叉树的右视图"></a>2.4 (变题) <a href="https://leetcode-cn.com/problems/binary-tree-right-side-view/" target="_blank" rel="noopener">二叉树的右视图</a></h3><p>该题是leetcode199题，medium难度，一句话题干描述：从上到下返回每一层最后一个元素</p>
+<p>总体思路：利用 BFS 进行层次遍历，记录下每层的最后一个元素。</p>
+<p><strong>解决方案1(BFS)：</strong> 在层序遍历代码基础上，判断当前节点是不是这层的最后一个节点，是的话才添加进结果数组。</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">if(i==n-1) res.add(cur.val);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>解决方案2(DFS)：</strong>我们按照 「根结点 -&gt; 右子树 -&gt; 左子树」 的顺序访问，就可以保证每层都是最先访问最右边的节点的。（与先序遍历 「根结点 -&gt; 左子树 -&gt; 右子树」 正好相反，先序遍历每层最先访问的是最左边的节点）</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">class Solution {
+    List<Integer> res= new ArrayList<>();
+    public List<Integer> rightSideView(TreeNode root) {
+        dfs(root,0);
+        return res;
+    }
+    private void dfs(TreeNode root,int depth) {
+        if(root==null) return ;
+        if(depth==res.size()){
+            res.add(root.val);
+        }
+        depth++;
+        dfs(root.right,depth);
+        dfs(root.left,depth);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-5-变题-填充每个节点的下一个右侧节点指针"><a href="#2-5-变题-填充每个节点的下一个右侧节点指针" class="headerlink" title="2.5 (变题) 填充每个节点的下一个右侧节点指针"></a>2.5 (变题) <a href="https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/" target="_blank" rel="noopener">填充每个节点的下一个右侧节点指针</a></h3><p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/png/1164521/1606386622220-5f244ffc-d1dc-45f8-9774-db55ba9fba71.png" alt="image"></p>
+<p>该题是leetcode116题，medium难度，一句话题干描述：使得每个节点的next指针指向它右侧的节点<strong>(完全二叉树)</strong></p>
+<p>总体思路：利用 BFS 进行层次遍历队列，队列中保存了第 i 层节点的信息，我们利用这个特点，将队列中的元素都串联一遍就可以了。</p>
+<p><strong>解决方案1(基础版)：</strong>使用队列<strong>，</strong>直接把层序遍历的代码改一改， 把每一层的节点连接起来,这种方法同样适用于不是完全二叉树的情况。</p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA"> while(!queue.isEmpty()){
+     int size=queue.size();
+     //前一个节点
+     Node pre = null;
+     for (int i = 0; i < size; i++) {
+         //出队
+         Node node = queue.poll();
+         //如果pre为空就表示node节点是这一行的第一个，
+         //没有前一个节点指向他，否则就让前一个节点指向他
+         if (pre != null) {
+             pre.next = node;
+         }
+         //然后再让当前节点成为前一个节点
+         pre = node;
+         //层序遍历的代码：左右子节点如果不为空就入队
+         if (node.left != null)
+             queue.add(node.left);
+         if (node.right != null)
+             queue.add(node.right);
+     }
+ }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上面运行效率并不是很高，这是因为我们把节点不停的入队然后再不停的出队，其实可以不需要队列，每一行都可以看成一个链表比如第一行就是只有一个节点的链表，第二行是只有两个节点的链表</p>
+<p><strong>解决方案2(优化版)：</strong>观察这样的串联树可以发现，有两种了连接方式</p>
+<ol>
+<li>两个串联的节点都有一个共同的父节点，通过父节点就可以将这两个子节点串联起来</li>
+<li>这两个串联的节点的父节点不同，对于这种情况，如果我们能将这一层的上一层串联好。那么可以通过父节点的 <code>next</code> 找到邻居，完成串联。即 <code>root.right.next =&gt; root.next.left</code>，这里我们需要保证 root.next 不为空就可以了。</li>
+</ol>
+<p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/gif/1164521/1606391263971-cafabe5c-705e-4730-91bf-5a6c24d10ec6.gif" alt="image"></p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">Node pre=root;
+//当前节点的left为空则退出循环
+while(pre.left!=null){
+    Node tmp=pre;
+    // 这层连接完成，则退出
+    while(tmp!=null){
+        //将tmp的左右节点都串联起来
+        //注:外层循环已经判断了当前节点的left不为空
+        tmp.left.next = tmp.right;
+        //下一个不为空说明上一层已经帮我们完成串联了
+        if(tmp.next!=null) {
+            tmp.right.next = tmp.next.left;
+        }
+        //继续右边遍历
+        tmp = tmp.next;
+    }
+    //从下一层的最左边开始遍历
+    pre = pre.left;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>解决方案3(递归骚操作)：</strong>递归从上往下，先处理当前节点，再处理它的左、右子树中的节点——前序遍历。</p>
+<p>递归终止条件：当遍历到叶子节点，没有孩子节点。</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/png/1164521/1606391564262-09011b28-293b-40be-a5d4-c3d1825bd37d.png?x-oss-process=image%2Fresize%2Cw_2180" alt="image"></p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">public Node connect(Node root) {
+    dfs(root);
+    return root;
+}
+void dfs(Node root){
+    if(root==null) return ;
+    if(root.left!=null){
+        root.left.next = root.right;
+        if (root.next!=null){
+            root.right.next = root.next.left;
+        }     
+    }
+    connect(root.left);
+    connect(root.right);
+}
+// 更牛逼的写法
+private void dfs(Node node, Node next) {
+    if(node != null) {
+        node.next = next;
+        dfs(node.left, node.right);
+        dfs(node.right, node.next != null ? node.next.left : null);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>总结：**</strong>每个 node 左子树的 next , 就是 node 的右子树、每个 node 右子树的 next, 就是 node next 的 左子树**</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="2-6-变题-填充每个节点的下一个右侧节点指针II"><a href="#2-6-变题-填充每个节点的下一个右侧节点指针II" class="headerlink" title="2.6 (变题) 填充每个节点的下一个右侧节点指针II"></a>2.6 (变题) <a href="https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/" target="_blank" rel="noopener">填充每个节点的下一个右侧节点指针II</a></h3><p>该题是leetcode117题，medium难度，一句话题干描述：使得每个节点的next指针指向它右侧的节点<strong>(非完全二叉树)</strong></p>
+<p>总体思路：和上一题一样的思路</p>
+<p><strong>解决方案1(基础版)：</strong>使用队列<strong>，</strong>直接把层序遍历的代码改一改， 把每一层的节点连接起来,同上一题代码，略。</p>
+<p><strong>解决方案2(优化版)：</strong>更改上一题的相关代码，增加哑节点(找到下一层的第一个节点)，此代码也可用于上题</p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.nlark.com/yuque/0/2020/png/1164521/1606551652468-9a82e28a-b3e1-462b-9b14-b771228f7683.png" alt="image"></p>
+<pre class="line-numbers language-JAVA"><code class="language-JAVA">Node cur=root;
+//当前节点的left为空则退出循环
+while(cur!=null){
+    Node dummy = new Node(0);
+    //pre表示访下一层节点的前一个节点
+    Node pre = dummy;
+    // 这层连接完成，则退出
+    while(cur!=null){
+        //如果当前节点的左子节点不为空，就让pre节点的next指向他，也就是把它串起来
+        if(cur.left!=null){
+            pre.next=cur.left;
+            pre=pre.next;
+        }
+        if(cur.right!=null){
+            pre.next=cur.right;
+            pre=pre.next;
+        }
+        //继续访问这一行的下一个节点
+        cur = cur.next;
+    }
+   //把下一层串联成一个链表之后，让他赋值给cur，后续继续循环，直到cur为空为止
+   cur = dummy.next;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>此外，除了这些题外，还有以下题</p>
+<p><a href="https://leetcode-cn.com/problems/average-of-levels-in-binary-tree/" target="_blank" rel="noopener">637.二叉树的层平均值</a></p>
+<p><a href="https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/" target="_blank" rel="noopener">429.N叉树的前序遍历</a></p>
+<p><a href="https://leetcode-cn.com/problems/find-largest-value-in-each-tree-row/" target="_blank" rel="noopener">515.在每个树行中找最大值</a></p>
+<p>参考资料：leetcode题解，感谢这些大佬的配图以及易懂的语言！！</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -824,7 +1169,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dongzhougu.github.io/2020/06/28/hexo-bo-ke-bei-fen/">https://dongzhougu.github.io/2020/06/28/hexo-bo-ke-bei-fen/</a>
+                    <a href="https://dongzhougu.github.io/2020/11/26/er-cha-shu-de-bian-li/">https://dongzhougu.github.io/2020/11/26/er-cha-shu-de-bian-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -862,12 +1207,16 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                                    <span class="chip bg-color">博客搭建</span>
+                                <a href="/tags/%E5%88%B7%E9%A2%98/">
+                                    <span class="chip bg-color">刷题</span>
+                                </a>
+                            
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
                                 </a>
                             
                         </div>
@@ -1302,31 +1651,31 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/06/28/scikit-learn-xi-lie-yi-ji-qi-xue-xi-ji-chu/">
+                <a href="/2020/11/26/linux-chang-yong-ming-ling/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="scikit-learn系列一：机器学习基础">
+                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="Linux常用命令">
                         
-                        <span class="card-title">scikit-learn系列一：机器学习基础</span>
+                        <span class="card-title">Linux常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            介绍机器学习的基本概念与分类等
+                            记录常用的linu指令，以及conda指令等
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
+                            <a href="/categories/%E5%A4%87%E5%BF%98%E5%BD%95/" class="post-category">
+                                    备忘录
                                 </a>
                             
                             
@@ -1336,8 +1685,8 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">基础知识</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -1351,24 +1700,24 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/27/hexo-bo-ke-you-hua-jia-su/">
+                <a href="/2020/11/26/lxd-gpu2.0/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/17.jpg" class="responsive-img" alt="Hexo博客优化加速">
+                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/17.jpg" class="responsive-img" alt="使用LXD搭建多人共用GPU">
                         
-                        <span class="card-title">Hexo博客优化加速</span>
+                        <span class="card-title">使用LXD搭建多人共用GPU</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            访问速度优化，以及PicGo 图床
+                            每个用户都有自己的容器，宿主机为容器分配空间，gpu资源
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
                             </span>
                         <span class="publish-author">
                             
@@ -1385,12 +1734,8 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">博客搭建</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
