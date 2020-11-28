@@ -159,9 +159,9 @@
     };
     loaded();
 })()
- </script><meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="alternate" href="/atom.xml" title="欢迎来到，TWOTO 的博客" type="application/atom+xml">
-<style type="text/css" lang="css">
+ </script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="欢迎来到，TWOTO 的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><style type="text/css" lang="css">
     #loading-container{
         position: fixed;
         top: 0;
@@ -780,7 +780,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 <p><strong>先序：</strong>考察到一个节点后，即刻输出该节点的值，并继续遍历其左右子树。(根左右)</p>
 <p><strong>中序：</strong>考察到一个节点后，将其暂存，遍历完左子树后，再输出该节点的值，然后遍历右子树。(左根右)</p>
 <p><strong>后序：</strong>考察到一个节点后，将其暂存，遍历完左右子树后，再输出该节点的值。(左右根)</p>
-<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165618.png" alt="image.png"></p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165620.png" alt="image"></p>
 <p><strong>这种类型的题一般都是有两种解题思路：递归和迭代。</strong></p>
 <h3 id="1-1-递归法模板"><a href="#1-1-递归法模板" class="headerlink" title="1.1 递归法模板"></a>1.1 递归法模板</h3><blockquote>
 <p>我们并不需要太过于在意具体的递归过程，而是要想清楚让计算机干什么。计算机都可能溢出，用人脑去遍历就不现实了。</p>
@@ -876,7 +876,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="2-层序遍历及其变题"><a href="#2-层序遍历及其变题" class="headerlink" title="2 层序遍历及其变题"></a>2 层序遍历及其变题</h2><p>除了基本的三种遍历使用DFS，使用BFS广度优先搜索的层序遍历也很重要<a href="https://leetcode-cn.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="noopener">102. 二叉树的层序遍历</a></p>
 <p>下面是两种解决此类问题的方法，一般使用左边的BFS</p>
-<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165619.jpeg" alt="image"></p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165618.png" alt="image.png"></p>
 <h3 id="2-1-BFS层序遍历"><a href="#2-1-BFS层序遍历" class="headerlink" title="2.1 BFS层序遍历"></a>2.1 BFS层序遍历</h3><p>BFS遍历的标准写法如下，使用的是<strong>队列</strong>数据结构：</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">bfs</span><span class="token punctuation">(</span>TreeNode root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     Queue<span class="token operator">&lt;</span>TreeNode<span class="token operator">></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayDeque</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -892,7 +892,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>我们可以直接用 BFS 得出层序遍历结果。然而，层序遍历要求的输入结果和 BFS 是不同的。层序遍历要求我们区分每一层，也就是返回一个二维数组。而 BFS 的遍历结果是一个一维数组，无法区分每一层，见下图的对比。</p>
-<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165620.png" alt="image"></p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165619.jpeg" alt="image"></p>
 <p>因此，我们需要在每一层前微修改一下代码，在每一层遍历开始前，先记录队列中的结点数量 n（也就是这一层的节点数量），然后一口气处理完这一层的 n个结点。</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> List<span class="token operator">&lt;</span>List<span class="token operator">&lt;</span>Integer<span class="token operator">>></span> <span class="token function">levelOrder</span><span class="token punctuation">(</span>TreeNode root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     List<span class="token operator">&lt;</span>List<span class="token operator">&lt;</span>Integer<span class="token operator">>></span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -920,7 +920,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     <span class="token keyword">return</span> res<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样，我们就可以用BFS来解决层序遍历问题了，<strong>重点是记录了每一层节点的数量，动图如下</strong></p>
-<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165621.gif" alt="image"></p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165622.gif" alt="image"></p>
 <h3 id="2-2-选看-DFS层序遍历"><a href="#2-2-选看-DFS层序遍历" class="headerlink" title="2.2 (选看)DFS层序遍历"></a>2.2 (选看)DFS层序遍历</h3><p>DFS 遍历标准写法如下，使用的是<strong>递归</strong></p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span>TreeNode root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -930,10 +930,10 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>看起来比BFS的代码简洁很多，但观看下图就可以发现两者的遍历顺序是不同的，BFS其实更贴近我们想要的层序遍历逻辑。</p>
-<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165622.gif" alt="image"></p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165621.gif" alt="image"></p>
 <p>那DFS究竟可不可以解决层序遍历问题呢？当然是可以的！</p>
 <p>把这个二叉树的样子调整一下，摆成一个田字形的样子。</p>
-<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165623.jpeg" alt="image"><br><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165624.png" alt="image"></p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165623.jpeg" alt="image"><br><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165626.gif" alt="image"></p>
 <p>田字形的每一层就对应一个 list，每次递归的时候都需要<strong>带一个 index(表示当前的层数)</strong>，也就对应那个田字格子中的第几行，如果当前行对应的 list 不存在，就加入一个空 list 进去。代码实现如下。</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>*<span class="token punctuation">;</span> 
 <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
@@ -1015,7 +1015,7 @@ level<span class="token punctuation">.</span><span class="token function">add</s
         <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span>depth<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2-5-变题-填充每个节点的下一个右侧节点指针"><a href="#2-5-变题-填充每个节点的下一个右侧节点指针" class="headerlink" title="2.5 (变题) 填充每个节点的下一个右侧节点指针"></a>2.5 (变题) <a href="https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/" target="_blank" rel="noopener">填充每个节点的下一个右侧节点指针</a></h3><p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165625.gif" alt="image"></p>
+<h3 id="2-5-变题-填充每个节点的下一个右侧节点指针"><a href="#2-5-变题-填充每个节点的下一个右侧节点指针" class="headerlink" title="2.5 (变题) 填充每个节点的下一个右侧节点指针"></a>2.5 (变题) <a href="https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/" target="_blank" rel="noopener">填充每个节点的下一个右侧节点指针</a></h3><p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165624.png" alt="image"></p>
 <p>该题是leetcode116题，medium难度，一句话题干描述：使得每个节点的next指针指向它右侧的节点<strong>(完全二叉树)</strong></p>
 <p>总体思路：利用 BFS 进行层次遍历队列，队列中保存了第 i 层节点的信息，我们利用这个特点，将队列中的元素都串联一遍就可以了。</p>
 <p><strong>解决方案1(基础版)：</strong>使用队列<strong>，</strong>直接把层序遍历的代码改一改， 把每一层的节点连接起来,这种方法同样适用于不是完全二叉树的情况。</p>
@@ -1046,7 +1046,7 @@ level<span class="token punctuation">.</span><span class="token function">add</s
 <li>两个串联的节点都有一个共同的父节点，通过父节点就可以将这两个子节点串联起来</li>
 <li>这两个串联的节点的父节点不同，对于这种情况，如果我们能将这一层的上一层串联好。那么可以通过父节点的 <code>next</code> 找到邻居，完成串联。即 <code>root.right.next =&gt; root.next.left</code>，这里我们需要保证 root.next 不为空就可以了。</li>
 </ol>
-<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165626.gif" alt="image"></p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201128165625.gif" alt="image"></p>
 <pre class="line-numbers language-java"><code class="language-java">Node pre<span class="token operator">=</span>root<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//当前节点的left为空则退出循环</span>
 <span class="token keyword">while</span><span class="token punctuation">(</span>pre<span class="token punctuation">.</span>left<span class="token operator">!=</span>null<span class="token punctuation">)</span><span class="token punctuation">{</span>
