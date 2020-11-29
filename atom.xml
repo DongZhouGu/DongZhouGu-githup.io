@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongzhougu.github.io/"/>
-  <updated>2020-11-26T14:29:38.284Z</updated>
+  <updated>2020-11-29T08:27:35.267Z</updated>
   <id>https://dongzhougu.github.io/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图解HTTP总结</title>
+    <link href="https://dongzhougu.github.io/2020/11/29/tu-jie-http-zong-jie/"/>
+    <id>https://dongzhougu.github.io/2020/11/29/tu-jie-http-zong-jie/</id>
+    <published>2020-11-29T04:15:50.000Z</published>
+    <updated>2020-11-29T08:27:35.267Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一-、基础概念&quot;&gt;&lt;a href=&quot;#一-、基础概念&quot; class=&quot;headerlink&quot; title=&quot;一 、基础概念&quot;&gt;&lt;/a&gt;一 、基础概念&lt;/h2&gt;&lt;h3 id=&quot;请求和响应报文&quot;&gt;&lt;a href=&quot;#请求和响应报文&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://dongzhougu.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="http" scheme="https://dongzhougu.github.io/tags/http/"/>
+    
+      <category term="网络" scheme="https://dongzhougu.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode总结—二叉树的遍历</title>
+    <link href="https://dongzhougu.github.io/2020/11/27/er-cha-shu-de-bian-li/"/>
+    <id>https://dongzhougu.github.io/2020/11/27/er-cha-shu-de-bian-li/</id>
+    <published>2020-11-27T04:15:50.000Z</published>
+    <updated>2020-11-29T08:25:46.925Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;二叉树是面试中常见的题目类型，这里，针对 leetcode 前200道题中的二叉树相关问题进行总结与思考，力求烂熟于心，能根据题目名回忆起题目的具体描述，进而用简洁的语言描述出算法的核心。具体的题目答案可打开 leetcode 查看历史提交记录。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://dongzhougu.github.io/categories/leetcode/"/>
+    
+    
+      <category term="算法" scheme="https://dongzhougu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="刷题" scheme="https://dongzhougu.github.io/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="https://dongzhougu.github.io/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux常用命令</title>
@@ -67,38 +128,6 @@
     
     
       <category term="Linux" scheme="https://dongzhougu.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode总结—二叉树的遍历</title>
-    <link href="https://dongzhougu.github.io/2020/11/26/er-cha-shu-de-bian-li/"/>
-    <id>https://dongzhougu.github.io/2020/11/26/er-cha-shu-de-bian-li/</id>
-    <published>2020-11-26T04:15:50.000Z</published>
-    <updated>2020-11-28T09:06:03.016Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;二叉树是面试中常见的题目类型，这里，针对 leetcode 前200道题中的二叉树相关问题进行总结与思考，力求烂熟于心，能根据题目名回忆起题目的具体描述，进而用简洁的语言描述出算法的核心。具体的题目答案可打开 leetcode 查看历史提交记录。&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://dongzhougu.github.io/categories/leetcode/"/>
-    
-    
-      <category term="算法" scheme="https://dongzhougu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="刷题" scheme="https://dongzhougu.github.io/tags/%E5%88%B7%E9%A2%98/"/>
-    
-      <category term="leetcode" scheme="https://dongzhougu.github.io/tags/leetcode/"/>
     
   </entry>
   
@@ -201,7 +230,7 @@
     <link href="https://dongzhougu.github.io/2020/07/16/scikit-learn-xi-lie-jiu-k-jun-zhi/"/>
     <id>https://dongzhougu.github.io/2020/07/16/scikit-learn-xi-lie-jiu-k-jun-zhi/</id>
     <published>2020-07-16T07:57:44.000Z</published>
-    <updated>2020-07-16T11:02:06.712Z</updated>
+    <updated>2020-11-29T08:28:06.105Z</updated>
     
     <summary type="html">
     
@@ -218,8 +247,6 @@
     
       <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-    
-      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
       <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
     
@@ -230,7 +257,7 @@
     <link href="https://dongzhougu.github.io/2020/07/15/scikit-learn-xi-lie-ba-pca/"/>
     <id>https://dongzhougu.github.io/2020/07/15/scikit-learn-xi-lie-ba-pca/</id>
     <published>2020-07-15T07:57:44.000Z</published>
-    <updated>2020-07-16T08:37:52.647Z</updated>
+    <updated>2020-11-29T08:28:13.949Z</updated>
     
     <summary type="html">
     
@@ -247,8 +274,6 @@
     
       <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-    
-      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
       <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
     
@@ -259,7 +284,7 @@
     <link href="https://dongzhougu.github.io/2020/07/02/scikit-learn-xi-lie-qi-po-su-bei-xie-si/"/>
     <id>https://dongzhougu.github.io/2020/07/02/scikit-learn-xi-lie-qi-po-su-bei-xie-si/</id>
     <published>2020-07-02T07:57:44.000Z</published>
-    <updated>2020-07-02T08:17:01.143Z</updated>
+    <updated>2020-11-29T08:28:21.094Z</updated>
     
     <summary type="html">
     
@@ -276,8 +301,6 @@
     
       <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-    
-      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
       <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
     
@@ -288,7 +311,7 @@
     <link href="https://dongzhougu.github.io/2020/07/01/scikit-learn-xi-lie-liu-svm/"/>
     <id>https://dongzhougu.github.io/2020/07/01/scikit-learn-xi-lie-liu-svm/</id>
     <published>2020-07-01T07:57:44.000Z</published>
-    <updated>2020-07-02T08:15:55.196Z</updated>
+    <updated>2020-11-29T08:27:58.475Z</updated>
     
     <summary type="html">
     
@@ -305,8 +328,6 @@
     
       <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-    
-      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
       <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
     
@@ -317,7 +338,7 @@
     <link href="https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-wu-jue-ce-shu/"/>
     <id>https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-wu-jue-ce-shu/</id>
     <published>2020-06-30T10:57:44.000Z</published>
-    <updated>2020-06-30T11:29:42.278Z</updated>
+    <updated>2020-11-29T08:28:28.527Z</updated>
     
     <summary type="html">
     
@@ -334,8 +355,6 @@
     
       <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-    
-      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
       <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
     
@@ -346,7 +365,7 @@
     <link href="https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-si-luo-ji-hui-gui/"/>
     <id>https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-si-luo-ji-hui-gui/</id>
     <published>2020-06-30T07:57:44.000Z</published>
-    <updated>2020-06-30T06:38:28.549Z</updated>
+    <updated>2020-11-29T08:27:49.495Z</updated>
     
     <summary type="html">
     
@@ -363,8 +382,6 @@
     
       <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-    
-      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
       <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
     
@@ -375,7 +392,7 @@
     <link href="https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-san-xian-xing-hui-gui/"/>
     <id>https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-san-xian-xing-hui-gui/</id>
     <published>2020-06-30T02:57:44.000Z</published>
-    <updated>2020-11-26T15:05:47.836Z</updated>
+    <updated>2020-11-29T08:29:10.613Z</updated>
     
     <summary type="html">
     
@@ -392,8 +409,6 @@
     
       <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-    
-      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
       <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
     
@@ -404,7 +419,7 @@
     <link href="https://dongzhougu.github.io/2020/06/29/scikit-learn-xi-lie-er-k-jin-lin/"/>
     <id>https://dongzhougu.github.io/2020/06/29/scikit-learn-xi-lie-er-k-jin-lin/</id>
     <published>2020-06-29T02:57:44.000Z</published>
-    <updated>2020-11-26T15:05:29.299Z</updated>
+    <updated>2020-11-29T08:29:02.653Z</updated>
     
     <summary type="html">
     
@@ -422,8 +437,6 @@
       <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
       <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
     
   </entry>
@@ -433,7 +446,7 @@
     <link href="https://dongzhougu.github.io/2020/06/28/scikit-learn-xi-lie-yi-ji-qi-xue-xi-ji-chu/"/>
     <id>https://dongzhougu.github.io/2020/06/28/scikit-learn-xi-lie-yi-ji-qi-xue-xi-ji-chu/</id>
     <published>2020-06-28T06:48:44.000Z</published>
-    <updated>2020-11-26T15:05:19.185Z</updated>
+    <updated>2020-11-29T08:28:54.943Z</updated>
     
     <summary type="html">
     
@@ -452,7 +465,7 @@
       <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="基础知识" scheme="https://dongzhougu.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
