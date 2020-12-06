@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongzhougu.github.io/"/>
-  <updated>2020-12-03T05:07:26.461Z</updated>
+  <updated>2020-12-06T13:37:06.206Z</updated>
   <id>https://dongzhougu.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Learning to Detect Human-Object Interaction</title>
+    <link href="https://dongzhougu.github.io/2020/12/03/lun-wen-learning-to-detect-human-object-interaction/"/>
+    <id>https://dongzhougu.github.io/2020/12/03/lun-wen-learning-to-detect-human-object-interaction/</id>
+    <published>2020-12-03T12:33:00.000Z</published>
+    <updated>2020-12-06T13:37:06.206Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;文献-Learning-to-Detect-Human-Object-Interaction&quot;&gt;&lt;a href=&quot;#文献-Learning-to-Detect-Human-Object-Interaction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="文献阅读" scheme="https://dongzhougu.github.io/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"/>
+    
+    
+      <category term="HOI" scheme="https://dongzhougu.github.io/tags/HOI/"/>
+    
+      <category term="数据集" scheme="https://dongzhougu.github.io/tags/%E6%95%B0%E6%8D%AE%E9%9B%86/"/>
+    
+  </entry>
   
   <entry>
     <title>TCP/IP+HTTP面试题</title>
@@ -547,37 +576,6 @@
         
         
           &lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="教程" scheme="https://dongzhougu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Hexo" scheme="https://dongzhougu.github.io/tags/Hexo/"/>
-    
-      <category term="博客搭建" scheme="https://dongzhougu.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Hexo搭建Github博客</title>
-    <link href="https://dongzhougu.github.io/2020/06/27/shi-yong-hexo-da-jian-github-bo-ke/"/>
-    <id>https://dongzhougu.github.io/2020/06/27/shi-yong-hexo-da-jian-github-bo-ke/</id>
-    <published>2020-06-27T09:15:50.000Z</published>
-    <updated>2020-11-26T15:05:36.777Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;以下为搭建本博客的教程&lt;strong&gt;(针对windows)&lt;/strong&gt;，记录一下自己的过程，也方便想要建站的小伙伴快速上手。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;Github Pages:&lt;/code&gt; 可以被认为是用户编写的、托管在 Github
         
       
     

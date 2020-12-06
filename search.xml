@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Learning to Detect Human-Object Interaction</title>
+      <link href="/2020/12/03/lun-wen-learning-to-detect-human-object-interaction/"/>
+      <url>/2020/12/03/lun-wen-learning-to-detect-human-object-interaction/</url>
+      
+        <content type="html"><![CDATA[<h1 id="文献-Learning-to-Detect-Human-Object-Interaction"><a href="#文献-Learning-to-Detect-Human-Object-Interaction" class="headerlink" title="文献-Learning to Detect Human-Object Interaction"></a>文献-Learning to Detect Human-Object Interaction</h1><ul><li>概述：2018年由密歇根大学和华盛顿大学共同提出HICO-DET数据集</li><li>关键词：数据集</li><li>论文地址：<a href="https://www.yuque.com/ugdongzhou/io8kmc/1661139" target="_blank" rel="noopener">https://www.yuque.com/ugdongzhou/io8kmc/1661139</a></li><li>数据集:  <a href="http://www-personal.umich.edu/~ywchao/hico/" target="_blank" rel="noopener">http://www-personal.umich.edu/~ywchao/hico/</a></li></ul><p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201206213325.png" alt="image-20201203205600371"></p><h2 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h2><ul><li>提出一个新的benchmark ——HICO-DET，提供了超过150,000个标注后的人类-物体组合，包含600个HOI类别，即每个HOI类别平均250个组合实例。</li><li>提出了基于人-物区域的卷积神经网络HO-RCNN。分两步，1. 使用最先进的人体和物体检测器生成人体-物体区域对的proposal；2. 将每个人-物框proposal送入CNN，以生成HOI分类分数。</li></ul><p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201206213222.png" alt="image-20201203211834372"></p><h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><h4 id="三个benchmark"><a href="#三个benchmark" class="headerlink" title="三个benchmark"></a>三个benchmark</h4><ul><li>Full—— 所有的600个HOI分类</li><li>Rare ——138个HOI类别（少于10个训练实例）</li><li>Non-Rare ——462个HOI类别（大于等于10个训练实例）</li></ul><h4 id="两种评估方法"><a href="#两种评估方法" class="headerlink" title="两种评估方法"></a>两种评估方法</h4><ul><li>Known Object ——定位HOI(如人-自行车对)以及区分互动(如“骑行”)</li><li>Default setting ——更有挑战性，图像中可能不存在目标对象</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 文献阅读 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HOI </tag>
+            
+            <tag> 数据集 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>TCP/IP+HTTP面试题</title>
       <link href="/2020/12/03/tcpip-http-mian-shi-ti/"/>
       <url>/2020/12/03/tcpip-http-mian-shi-ti/</url>
