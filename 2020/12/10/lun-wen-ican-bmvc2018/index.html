@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux常用命令, 欢迎来到，TWOTO 的博客">
+    <meta name="keywords" content="iCAN (BMVC2018), 欢迎来到，TWOTO 的博客">
     <meta name="description" content="技术、效率、摄影">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux常用命令 | 欢迎来到，TWOTO 的博客</title>
+    <title>iCAN (BMVC2018) | 欢迎来到，TWOTO 的博客</title>
     <link rel="icon" type="image/png" href="/twoto.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/libs/awesome/css/all.css">
@@ -586,12 +586,12 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux常用命令</h1>
+                    <h1 class="description center-align post-title">iCAN (BMVC2018)</h1>
                 </div>
             </div>
         </div>
@@ -708,8 +708,8 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/HOI/">
+                                <span class="chip bg-color">HOI</span>
                             </a>
                         
                     </div>
@@ -720,8 +720,8 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%A4%87%E5%BF%98%E5%BD%95/" class="post-category">
-                                备忘录
+                            <a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" class="post-category">
+                                文献阅读
                             </a>
                         
                     </div>
@@ -733,7 +733,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-26
+                    2020-12-10
                 </div>
                 
 
@@ -742,7 +742,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.6k
                 </div>
                 
 
@@ -759,166 +759,66 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、文件-文件夹管理"><a href="#一、文件-文件夹管理" class="headerlink" title="一、文件/文件夹管理"></a><strong>一、文件/文件夹管理</strong></h2><pre class="line-numbers language-sh"><code class="language-sh">#列出当前目录文件（不包括隐含文件） 
-ls 
-#列出当前目录文件（包括隐含文件）
-ls -a  
-#列出当前目录下文件的详细信息 
-ls -l 
-#筛选命令，比如我想查找当前目录下的 markdown 文件
-ls -lh | grep .md
-
-#回当前用户的宿主目录 
-cd
-#回当前目录的上一级目录 
-cd .. 
-#回上一次所在的目录 
-cd - 
-#来指出当前所在的路径
-pwd
-
-#创建一个目录 
-mkdir 目录名 
-#删除一个空目录 
-rmdir 空目录名 
-#删除一个文件或多个文件 
-rm 文件名 文件名 
-#删除一个非空目录下的一切 
-rm -rf 非空目录名 
-
-#创建空文件
-touch 文件名
-#删除文件
-rm -rf 文件名
-#查看文件
-cat 文件名【显示全部内容，文件太大无法全部显示】
-cat -n 文件名 【查看内容，并添加行号】
-
-#拷贝到目标位置，或者新位置
-cp原文件名或目录名 目标位置 
-mv 原文件名或目录名 新文件名或目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="二、系统信息管理"><a href="#二、系统信息管理" class="headerlink" title="二、系统信息管理"></a><strong>二、系统信息管理</strong></h2><pre class="line-numbers language-sh"><code class="language-sh">#查看内核版本 
-uname -a 
-#查看ubuntu版本 
-cat /etc/issue 
-#查看CPU信息 
-cat /proc/cpuinfo 
-#查看usb设备 
-lsusb 
-#查看PCI设备 
-lspci
-#查看网络信息
-ifconfig
-#查看磁盘信息 
-sudo fdisk -l 
-#查看硬盘剩余空间
-df -h  
-#查看当前的内存使用情况 
-free -m
-
-#查看当前有哪些进程 
-ps -A 
-#(就是ps -A中的第一列的数字)或者 killall 进程名( 杀死一个进程) 
-kill 进程号
-#强制杀死一个进程
-kill -9 进程号  
-
-#更改系统用户密码
-sudo passwd root 
-
-#进入root权限
-sudo su
-
-#从服务器上同步时间 
-sudo ntpdate time.nist.gov 
-sudo ntpdate time.windows.com <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="三、压缩文件处理"><a href="#三、压缩文件处理" class="headerlink" title="三、压缩文件处理"></a><strong>三、压缩文件处理</strong></h2><pre class="line-numbers language-sh"><code class="language-sh">#解压缩 xxx.tar.gz 
-tar -zxvf xxx.tar.gz 
-
-#解压缩 xxx.tar.bz2 
-tar -jxvf xxx.tar.bz2 
-
-#压缩aaa bbb目录为xxx.tar.gz 
-tar -zcvf xxx.tar.gz aaa bbb 
-
-#压缩aaa bbb目录为xxx.tar.bz2 
-tar -jcvf xxx.tar.bz2 aaa bbb 
-
-#解压缩 RAR 文件 
-#1) 先安装 
-sudo apt-get install rar unrar 
-sudo ln -f /usr/bin/rar /usr/bin/unrar 
-#2) 解压 
-unrar x aaaa.rar 
-#安装deb文件
-sudo dpkg -i xxx.deb <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="四、换国内源"><a href="#四、换国内源" class="headerlink" title="四、换国内源"></a><strong>四、换国内源</strong></h2><h3 id="apt换源"><a href="#apt换源" class="headerlink" title="apt换源"></a>apt换源</h3><pre class="line-numbers language-sh"><code class="language-sh">sudo vim /etc/apt/sources.list
-
-----
-deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
---
-
-#刷新源
-sudo apt update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="conda换源"><a href="#conda换源" class="headerlink" title="conda换源"></a>conda换源</h3><pre class="line-numbers language-sh"><code class="language-sh">#查看当前的下载源
-conda config --show
-
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge 
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
-#设置搜索时显示通道地址 从channel中安装包时显示channel的url，这样就可以知道包的安装来源
-conda config --set show_channel_urls yes
-
-#查看现在的下载源
-conda config --show<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="conda命令"><a href="#conda命令" class="headerlink" title="conda命令"></a>conda命令</h3><pre class="line-numbers language-sh"><code class="language-sh">#创建一个名为python34的环境，指定Python版本是3.4
-conda create --name python34 python=3.4
-#使用activate激活某个环境
-source activate python34 # for Linux & Mac
-# 离开环境
-source deactivate
-#删除一个已有的环境
-conda remove --name python34 --all
-#克隆环境
-conda create --name newname --clone oldname 
-#列出所有环境
-conda info -e
-
-# 查看已经安装的packages
-conda list
-# 查看某个指定环境的已安装包
-conda list -n python34
-
-# pip安装加上国内源
-pip install <name> -i https://pypi.tuna.tsinghua.edu.cn/simple
-pip install <name> -i http://mirrors.aliyun.com/pypi/simple/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="五、apt命令"><a href="#五、apt命令" class="headerlink" title="五、apt命令"></a><strong>五、apt命令</strong></h2><pre class="line-numbers language-sh"><code class="language-sh">sudo apt-get install package 安装包 
-sudo apt-get install package - - reinstall 重新安装包 
-sudo apt-get -f install 修复安装”-f = –fix-missing” 
-sudo apt-get remove package 删除包 
-sudo apt-get remove package - - purge 删除包，包括删除配置文件等 
-sudo apt-get update 更新源 
-sudo apt-get upgrade 更新已安装的包 
-sudo apt-get clean 清理所有软件缓存（即缓存在/var/cache/apt/archives目录里的deb包）
-sudo apt-get autoclean 清理旧版本的软件缓存 
-sudo apt-get autoremove  删除系统不再使用的孤立软件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="六、其他"><a href="#六、其他" class="headerlink" title="六、其他"></a><strong>六、其他</strong></h2><pre class="line-numbers language-sh"><code class="language-sh"># 给运行权限
-chmod +x  *.sh
-# 给所有权限
-chmod 777  *.sh
-# 每10s显卡情况
-watch -n 10 nvidia-smi
-# 查看cuda版本
-nvcc -V<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="文献-iCAN-Instance-Centric-Attention-Network-for-Human-Object-Interaction-Detection"><a href="#文献-iCAN-Instance-Centric-Attention-Network-for-Human-Object-Interaction-Detection" class="headerlink" title="文献-iCAN: Instance-Centric Attention Network for Human-Object Interaction Detection"></a>文献-iCAN: Instance-Centric Attention Network for Human-Object Interaction Detection</h1><ul>
+<li>概述：人或物体实例的外观包含上下文线索，利用这些信息可以注意到图像中可以促进交互预测的部分。为了利用这些线索，研究者提出了一个以实例为中心的注意力模块，学习根据每个实例的外观动态突出显示图像中的区域。这种基于注意力的网络允许研究者选择性地聚合与识别 HOI相关的特征。在InteractNet上做的改进,达到了 V-COCO 45.3%。</li>
+<li>关键词：注意力机制</li>
+<li>论文地址：<a href="https://www.yuque.com/ugdongzhou/io8kmc/1661063" target="_blank" rel="noopener">https://www.yuque.com/ugdongzhou/io8kmc/1661063</a></li>
+<li>源码:  <a href="https://github.com/vt-vl-lab/iCAN" target="_blank" rel="noopener">https://github.com/vt-vl-lab/iCAN</a>  和DRG2020同属<a href="https://github.com/vt-vl-lab" target="_blank" rel="noopener">vt-vl-lab</a>实验室</li>
+</ul>
+<h2 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h2><p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134848.png" alt="image-20201209144401235"></p>
+<h2 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h2><ul>
+<li>引入了一个以实例为中心的注意力模块，它允许网络动态突出信息区域以改进 HOI 检测。</li>
+</ul>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134849.png" alt="image-20201209152307633"></p>
+<ol>
+<li><p>在由h或者o计算a的分数时，不止用它们本身的特征，还concat了context特征，contex特征则是根据intance产生的注意力在原图的特征上得到的。</p>
+<p>给定图像的卷积特征（以灰色显示）和人/物体边界框（以红色显示），iCAN 模块提取实例</p>
+<p>（人类）或（物体）的外观特征以及来自以实例为中心的注意力映射的特征。为了计算注意力映射，研究者使用 512 个通道的 bottleneck 来评估嵌入空间中的相似性【37】【38】。具体来说，研究者用 1×1 卷积和实例外观特征将图像特征嵌入到全连接层中。这里的 res5 表示第五个残差块，GAP 表示全局平均池化层，FC 表示全连接层。</p>
+</li>
+<li><p>同样需要判断h和o是否有关系，该方法是用空间的interaction pattern（neural-motif中有这个）并concat human instance计算得到的。</p>
+</li>
+</ol>
+<p>【37】 Ashish V aswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez,<br>Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. In NIPS, 2017.</p>
+<p>【38】Xiaolong Wang, Ross Girshick, Abhinav Gupta, and Kaiming He. Non-local neural networks. InCVPR, 2018.</p>
+<h2 id="【38】Non-local-Neural-Networks-facebook"><a href="#【38】Non-local-Neural-Networks-facebook" class="headerlink" title="【38】Non-local Neural Networks -facebook"></a>【38】Non-local Neural Networks -facebook</h2><h4 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h4><p>计算机视觉领域注意力机制的开篇之作。提出了non-local operations，使用自注意力机制建立远程依赖。 - local operations: 卷积(对局部领域)、recurrent(对当前/前一时刻)等操作。 - non-local operations用于捕获长距离依赖（long-range dependencies），即如何建立图像上两个有一定距离的像素之间的联系，如何建立视频里两帧的联系，如何建立一段话中不同词的联系等。 Non-local operations 在计算某个位置的响应时，是考虑所有位置 features 的加权——所有位置可以是空间的，时间的，时空的。</p>
+<h4 id="网络结构-1"><a href="#网络结构-1" class="headerlink" title="网络结构"></a>网络结构</h4><p>给出非局部操作的具体公式。首先在深度学习中非局部操作可以表达为：</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134850.png" alt="img"></p>
+<p>i是输出特征图的其中一个位置，通用来说这个位置可以是时间、空间和时空。j是所有可能位置的索引，x是输入信号，可以是图像、序列和视频，通常是特征图。y是和x尺度一样的输出图，f是配对计算函数，计算第i个位置和其他所有位置的相关性，g是一元输入函数，目的是进行信息变换，C(x)是归一化函数，保证变换前后整体信息不变。以上是一个非常泛化的公式，结合神经网络特定，需要考虑其具体形式。首先 g 由于是一元输出，比较简单，我可以采用1x1卷积，代表线性嵌入，其形式为</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134851.png" alt="img"></p>
+<p>对于f，前面我们说过其实就是计算两个位置的相关性，那么第一个非常自然的函数是Gaussian</p>
+<p><strong>(1) Gaussian</strong></p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134852.png" alt="img"></p>
+<p>对两个位置进行点乘，然后通过指数映射，放大差异。</p>
+<p><strong>(2) Embedded Gaussian</strong></p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134853.png" alt="img"></p>
+<p>前面的gaussian形式是直接在当前空间计算，而(2)更加通用，在嵌入空间中计算高斯距离。这里：</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134854.png" alt="img"></p>
+<p>完整考虑是：</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134855.png" alt="img"></p>
+<p><strong>(3) Dot product</strong></p>
+<p>考虑一种最简单的非局部操作形式：</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134856.png" alt="image-20201210134835084"></p>
+<p>其中C(x)=N，像素个数。可以看出(2) (3)的主要区别是是否含有激活函数softmax。</p>
+<p><strong>(4) Concatenation</strong></p>
+<p>参考 Relation Networks可以提出：</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134857.png" alt="image-20201210134825277"></p>
+<h4 id="Non-local-Block"><a href="#Non-local-Block" class="headerlink" title="Non-local Block"></a>Non-local Block</h4><p>前面是基本的非局部操作算子，利用这些算子，下面开始构造成模块。 </p>
+<p><img src="/medias/loading.gif" data-original="https:////upload-images.jianshu.io/upload_images/11692737-fd82671ed688abb4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/140/format/webp" alt="img"></p>
+<p>可以看出，上面构造成了残差形式。上面的做法的<strong>好处是可以随意嵌入到任何一个预训练好的网络中，因为只要设置W_z初始化为0，那么就没有任何影响，然后在迁移学习中学习新的权重。这样就不会因为引入了新的模块而导致预训练权重无法使用</strong>。</p>
+<p>下面结合具体实例分析：。</p>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201210134858.png" alt="img"></p>
+<p>由于我们考虑的是图片，故可以直接设置T=1，或者说不存在。</p>
+<ul>
+<li><p>首先网络输入是X= (batch, h, w, 1024) ，经过Embedded Gaussian中的两个嵌入权重变换<img src="/medias/loading.gif" data-original="https://img2018.cnblogs.com/blog/1470684/201911/1470684-20191118183432078-1492031547.png" alt="W_{\theta}"> ， <img src="/medias/loading.gif" data-original="https://img2018.cnblogs.com/blog/1470684/201911/1470684-20191118183432402-981947511.png" alt="W_{\phi}">得到(batch, h, w, 512), (batch, h, w, 512), 其实这里的目的是降低通道数，减少计算量；</p>
+</li>
+<li><p>然后分别对这两个输出进行reshape操作，变成(batch, hw, 512)，后对这两个输出进行矩阵乘(其中一个要转置)，计算相似性，得到(batch, hw, hw),</p>
+</li>
+<li><p>然后在第2个维度即最后一个维度上进行softmax操作，得到(batch, hw, hw), 意这样做就是空间注意力，相当于找到了当前图片或特征图中每个像素与其他所有位置像素的归一化相关性；也就是得到0~1的weights，这里就是我们需要的 Self-attention 系数；</p>
+</li>
+<li><p>然后将 g 也采用一样的操作，先通道降维，然后reshape；然后和 (batch, hw, hw)进行矩阵乘，得到(batch, h, w, 512), 即将空间注意力机制应用到了所有通道的每张特征图对应位置上，本质就是输出的每个位置值都是其他所有位置的加权平均值，通过softmax操作可以进一步突出共性。最后经过一个1x1卷积恢复输出通道，保证输入输出尺度完全相同。</p>
+</li>
+</ul>
+<p>代码地址  <a href="https://github.com/AlexHex7/Non-local_pytorch" target="_blank" rel="noopener">https://github.com/AlexHex7/Non-local_pytorch</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -962,7 +862,7 @@ nvcc -V<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dongzhougu.github.io/2020/11/26/linux-chang-yong-ming-ling/">https://dongzhougu.github.io/2020/11/26/linux-chang-yong-ming-ling/</a>
+                    <a href="https://dongzhougu.github.io/2020/12/10/lun-wen-ican-bmvc2018/">https://dongzhougu.github.io/2020/12/10/lun-wen-ican-bmvc2018/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1000,8 +900,8 @@ nvcc -V<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/HOI/">
+                                    <span class="chip bg-color">HOI</span>
                                 </a>
                             
                         </div>
@@ -1432,46 +1332,48 @@ nvcc -V<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/26/lxd-gpu2.0/">
+                <a href="/2020/12/10/lun-wen-ican-bmvc2018/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/17.jpg" class="responsive-img" alt="使用LXD搭建多人共用GPU">
+                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/13.jpg" class="responsive-img" alt="iCAN (BMVC2018)">
                         
-                        <span class="card-title">使用LXD搭建多人共用GPU</span>
+                        <span class="card-title">iCAN (BMVC2018)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            每个用户都有自己的容器，宿主机为容器分配空间，gpu资源
+                            iCAN (BMVC2018)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
+                            <a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" class="post-category">
+                                    文献阅读
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/HOI/">
+                        <span class="chip bg-color">HOI</span>
                     </a>
                     
                 </div>
@@ -1485,31 +1387,31 @@ nvcc -V<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/21/ssm-kuang-jia-zheng-he/">
+                <a href="/2020/12/03/lun-wen-hico-det-shu-ju-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="SSM框架整合">
+                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="HICO-DET数据集">
                         
-                        <span class="card-title">SSM框架整合</span>
+                        <span class="card-title">HICO-DET数据集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用Spring+SpringMVC+MyBaties整合Web框架，增删改查功能实现
+                            HICO-DET数据集 (2018年密歇根大学)
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" class="post-category">
+                                    文献阅读
                                 </a>
                             
                             
@@ -1519,16 +1421,12 @@ nvcc -V<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaWeb/">
-                        <span class="chip bg-color">JavaWeb</span>
+                    <a href="/tags/HOI/">
+                        <span class="chip bg-color">HOI</span>
                     </a>
                     
-                    <a href="/tags/Mybaties/">
-                        <span class="chip bg-color">Mybaties</span>
-                    </a>
-                    
-                    <a href="/tags/SpringMVC/">
-                        <span class="chip bg-color">SpringMVC</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E9%9B%86/">
+                        <span class="chip bg-color">数据集</span>
                     </a>
                     
                 </div>
