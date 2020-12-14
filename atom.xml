@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongzhougu.github.io/"/>
-  <updated>2020-12-10T05:49:22.412Z</updated>
+  <updated>2020-12-14T02:44:39.674Z</updated>
   <id>https://dongzhougu.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode总结—二叉树的构造</title>
+    <link href="https://dongzhougu.github.io/2020/12/13/er-cha-shu-de-gou-zao/"/>
+    <id>https://dongzhougu.github.io/2020/12/13/er-cha-shu-de-gou-zao/</id>
+    <published>2020-12-13T04:15:50.000Z</published>
+    <updated>2020-12-14T02:44:39.674Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;二叉树是面试中常见的题目类型，这里，针对leetcode前200道题中的二叉树相关问题进行总结与思考，力求烂熟于心，能根据题目名回忆起题目的具体描述，进而用简洁的语言描述出算法的核心。具体的题目答案可打开leetcode查看历史提交记录。&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://dongzhougu.github.io/categories/leetcode/"/>
+    
+    
+      <category term="算法" scheme="https://dongzhougu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="刷题" scheme="https://dongzhougu.github.io/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="https://dongzhougu.github.io/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>iCAN (BMVC2018)</title>
@@ -556,36 +588,6 @@
     
     
       <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客备份</title>
-    <link href="https://dongzhougu.github.io/2020/06/28/hexo-bo-ke-bei-fen/"/>
-    <id>https://dongzhougu.github.io/2020/06/28/hexo-bo-ke-bei-fen/</id>
-    <published>2020-06-28T04:15:50.000Z</published>
-    <updated>2020-06-28T04:33:28.375Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;https://dongzhougu.github.io/2020/06/27/shi-yong-hexo-da-jian-github-bo-ke/&quot;&gt;上一篇文章&lt;/a&gt;已经具体讲述了博客的搭建与基本使用，接下来记录博客的备份工作。&lt;/p&gt;
-&lt;h4
-        
-      
-    
-    </summary>
-    
-    
-      <category term="教程" scheme="https://dongzhougu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Hexo" scheme="https://dongzhougu.github.io/tags/Hexo/"/>
-    
-      <category term="博客搭建" scheme="https://dongzhougu.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
