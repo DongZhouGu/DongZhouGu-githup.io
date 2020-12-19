@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongzhougu.github.io/"/>
-  <updated>2020-12-14T02:44:39.674Z</updated>
+  <updated>2020-12-19T15:29:45.756Z</updated>
   <id>https://dongzhougu.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mask R-CNN 演变笔记</title>
+    <link href="https://dongzhougu.github.io/2020/12/19/maskrcnn/"/>
+    <id>https://dongzhougu.github.io/2020/12/19/maskrcnn/</id>
+    <published>2020-12-19T12:33:00.000Z</published>
+    <updated>2020-12-19T15:29:45.756Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="文献阅读" scheme="https://dongzhougu.github.io/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"/>
+    
+    
+      <category term="目标检测" scheme="https://dongzhougu.github.io/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode总结—二叉树的构造</title>
@@ -200,33 +227,6 @@
   </entry>
   
   <entry>
-    <title>使用LXD搭建多人共用GPU</title>
-    <link href="https://dongzhougu.github.io/2020/11/26/lxd-gpu2.0/"/>
-    <id>https://dongzhougu.github.io/2020/11/26/lxd-gpu2.0/</id>
-    <published>2020-11-26T04:15:50.000Z</published>
-    <updated>2020-11-26T13:08:41.936Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1、-背景&quot;&gt;&lt;a href=&quot;#1、-背景&quot; class=&quot;headerlink&quot; title=&quot;1、 背景&quot;&gt;&lt;/a&gt;1、
-        
-      
-    
-    </summary>
-    
-    
-      <category term="教程" scheme="https://dongzhougu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Linux" scheme="https://dongzhougu.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Linux常用命令</title>
     <link href="https://dongzhougu.github.io/2020/11/26/linux-chang-yong-ming-ling/"/>
     <id>https://dongzhougu.github.io/2020/11/26/linux-chang-yong-ming-ling/</id>
@@ -247,6 +247,33 @@
     
     
       <category term="备忘录" scheme="https://dongzhougu.github.io/categories/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    
+    
+      <category term="Linux" scheme="https://dongzhougu.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用LXD搭建多人共用GPU</title>
+    <link href="https://dongzhougu.github.io/2020/11/26/lxd-gpu2.0/"/>
+    <id>https://dongzhougu.github.io/2020/11/26/lxd-gpu2.0/</id>
+    <published>2020-11-26T04:15:50.000Z</published>
+    <updated>2020-11-26T13:08:41.936Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1、-背景&quot;&gt;&lt;a href=&quot;#1、-背景&quot; class=&quot;headerlink&quot; title=&quot;1、 背景&quot;&gt;&lt;/a&gt;1、
+        
+      
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://dongzhougu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="Linux" scheme="https://dongzhougu.github.io/tags/Linux/"/>
@@ -550,34 +577,6 @@
         
         
           &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scikit-learn系列一：机器学习基础</title>
-    <link href="https://dongzhougu.github.io/2020/06/28/scikit-learn-xi-lie-yi-ji-qi-xue-xi-ji-chu/"/>
-    <id>https://dongzhougu.github.io/2020/06/28/scikit-learn-xi-lie-yi-ji-qi-xue-xi-ji-chu/</id>
-    <published>2020-06-28T06:48:44.000Z</published>
-    <updated>2020-11-29T08:28:54.943Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;转载自作者: 片刻1998&lt;br&gt;GitHub地址:  &lt;a href=&quot;https://github.com/apachecn/AiLearning&quot; target=&quot;_blank&quot;
         
       
     
