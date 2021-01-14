@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongzhougu.github.io/"/>
-  <updated>2020-12-19T15:29:45.756Z</updated>
+  <updated>2021-01-14T13:52:54.247Z</updated>
   <id>https://dongzhougu.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>注意力机制-Attention</title>
+    <link href="https://dongzhougu.github.io/2021/01/14/zhu-yi-li-ji-zhi/"/>
+    <id>https://dongzhougu.github.io/2021/01/14/zhu-yi-li-ji-zhi/</id>
+    <published>2021-01-14T12:33:00.000Z</published>
+    <updated>2021-01-14T13:52:54.247Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;注意力机制-Attention&quot;&gt;&lt;a href=&quot;#注意力机制-Attention&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="文献阅读" scheme="https://dongzhougu.github.io/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"/>
+    
+    
+      <category term="注意力机制" scheme="https://dongzhougu.github.io/tags/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mask R-CNN 演变笔记</title>
     <link href="https://dongzhougu.github.io/2020/12/19/maskrcnn/"/>
     <id>https://dongzhougu.github.io/2020/12/19/maskrcnn/</id>
     <published>2020-12-19T12:33:00.000Z</published>
-    <updated>2020-12-19T15:29:45.756Z</updated>
+    <updated>2020-12-19T15:49:03.805Z</updated>
     
     <summary type="html">
     
@@ -542,33 +569,6 @@
     <id>https://dongzhougu.github.io/2020/06/30/scikit-learn-xi-lie-san-xian-xing-hui-gui/</id>
     <published>2020-06-30T02:57:44.000Z</published>
     <updated>2020-11-29T08:29:10.613Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;项目地址传送门，欢迎-star-和-fork-！&quot;&gt;&lt;a href=&quot;#项目地址传送门，欢迎-star-和-fork-！&quot; class=&quot;headerlink&quot; title=&quot;项目地址传送门，欢迎 star 和 fork ！&quot;&gt;&lt;/a&gt;项目地址&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="https://dongzhougu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="ML算法" scheme="https://dongzhougu.github.io/tags/ML%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scikit-learn系列二：K-近邻</title>
-    <link href="https://dongzhougu.github.io/2020/06/29/scikit-learn-xi-lie-er-k-jin-lin/"/>
-    <id>https://dongzhougu.github.io/2020/06/29/scikit-learn-xi-lie-er-k-jin-lin/</id>
-    <published>2020-06-29T02:57:44.000Z</published>
-    <updated>2020-11-29T08:29:02.653Z</updated>
     
     <summary type="html">
     

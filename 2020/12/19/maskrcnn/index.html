@@ -901,7 +901,7 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 <li>针对第二次取整，我们可以看到7x5的ROI被平均的分成了四份，针对每一小份又使用了4个采样点对这块区域进行采样，那么是如何采样的呢？首先4个采样点就是把这一小份平均分成四份，每一小份的值由双线性插值方法获得。因此每一小份最终可以由4份得到，在对这样的特征图进行MaxPooling , 最终得到2x2的ROI，这里为什么用4个采样点呢，其实用1个也是可以的，作者在实验中证明4个采样点的效果最好。</li>
 <li>双线性插值我们可以从图中直观地看到，其实就是做了三次线性插值</li>
 </ul>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="Loss-function"><a href="#Loss-function" class="headerlink" title="Loss function"></a>Loss function</h3><p>Mask R-CNN的损失函数有些特殊，我们来看一下公式</p>
+<h3 id="Loss-function"><a href="#Loss-function" class="headerlink" title="Loss function"></a>Loss function</h3><p>Mask R-CNN的损失函数有些特殊，我们来看一下公式</p>
 <p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201219230325.png" alt="image-20201219212439319"></p>
 <p>其中的Lmask 就是Mask branch的损失，这个mask就是指每个像素是0还是1，用来区分背景，做分割</p>
 <p><img src="/medias/loading.gif" data-original="https://gitee.com/ma_tung_zhou/imageuse1/raw/master/imgg/20201219230328.png" alt="image-20201219220637393"></p>
@@ -1429,30 +1429,29 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/12/19/maskrcnn/">
+                <a href="/2021/01/14/zhu-yi-li-ji-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="Mask R-CNN 演变笔记">
+                        <img src="https://cdn.jsdelivr.net/gh/DongZhouGu/DongZhouGu.github.io/medias/featureimages/23.jpg" class="responsive-img" alt="注意力机制-Attention">
                         
-                        <span class="card-title">Mask R-CNN 演变笔记</span>
+                        <span class="card-title">注意力机制-Attention</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Mask R-CNN的演变笔记
+                            深度学习中的注意力机制
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1465,12 +1464,11 @@ src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/">
-                        <span class="chip bg-color">目标检测</span>
+                    <a href="/tags/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/">
+                        <span class="chip bg-color">注意力机制</span>
                     </a>
                     
                 </div>
@@ -1678,7 +1676,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">114.3k</span>&nbsp;字
+                class="white-color">118.1k</span>&nbsp;字
             
             
             
